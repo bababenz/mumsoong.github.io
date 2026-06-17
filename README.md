@@ -1,2 +1,263 @@
-MUMSOONG.github.io
-/index_4.html
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mum Soong Production - บริการรับบินโดรน</title>
+<style>
+  :root{
+    --coral:#f08a7e;
+    --teal:#5fa8a0;
+    --mustard:#f0b94e;
+    --cream:#fdf6ec;
+    --text-dark:#3a3a3a;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    font-family:'Segoe UI',Tahoma,sans-serif;
+    background:var(--cream);
+    color:var(--text-dark);
+    line-height:1.6;
+  }
+  nav.brandbar{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:0.6rem;
+    padding:0.8rem 1rem;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+  }
+  nav.brandbar .drone-icon{font-size:1.6rem;}
+  nav.brandbar .brand-text{
+    text-align:left;
+    line-height:1.1;
+  }
+  nav.brandbar .brand-text .en{
+    font-weight:800;
+    font-size:1.15rem;
+    letter-spacing:0.5px;
+  }
+  nav.brandbar .brand-text .en span{color:var(--coral);}
+  nav.brandbar .brand-text .en span.s2{color:var(--teal);}
+  nav.brandbar .brand-text .th{
+    font-size:0.8rem;
+    color:#888;
+  }
+  header.hero{
+    position:relative;
+    text-align:center;
+    color:#fff;
+    overflow:hidden;
+  }
+  header.hero img{
+    width:100%;
+    display:block;
+    max-height:600px;
+    object-fit:cover;
+    object-position:center 30%;
+  }
+  header.hero .overlay{
+    position:absolute;
+    bottom:0;left:0;right:0;
+    background:linear-gradient(to top, rgba(0,0,0,0.55), transparent);
+    padding:2rem 1rem;
+  }
+  header.hero h1{
+    font-size:2.6rem;
+    font-weight:800;
+    letter-spacing:1px;
+    text-shadow:0 3px 8px rgba(0,0,0,0.6);
+  }
+  header.hero h1 .accent{color:var(--mustard);}
+  header.hero .subtitle{
+    font-size:1.3rem;
+    font-weight:600;
+    margin-top:0.3rem;
+    text-shadow:0 2px 6px rgba(0,0,0,0.6);
+  }
+  header.hero p{
+    font-size:1.1rem;
+    margin-top:0.5rem;
+    text-shadow:0 1px 4px rgba(0,0,0,0.5);
+  }
+  .cta-btn{
+    display:inline-block;
+    margin-top:1rem;
+    background:var(--coral);
+    color:#fff;
+    padding:0.8rem 2rem;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    transition:transform 0.2s;
+  }
+  .cta-btn:hover{transform:translateY(-2px);}
+
+  section{
+    max-width:1000px;
+    margin:0 auto;
+    padding:3rem 1.5rem;
+  }
+  h2{
+    text-align:center;
+    color:var(--teal);
+    font-size:1.8rem;
+    margin-bottom:2rem;
+  }
+  .services-grid, .pricing-grid, .gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:1.2rem;
+  }
+  .card{
+    background:#fff;
+    border-radius:16px;
+    padding:1.5rem;
+    text-align:center;
+    box-shadow:0 4px 12px rgba(0,0,0,0.06);
+    transition:transform 0.2s;
+  }
+  .card:hover{transform:translateY(-4px);}
+  .card .icon{font-size:2.2rem;margin-bottom:0.5rem;}
+  .card h3{color:var(--teal);margin-bottom:0.5rem;}
+  .card p{font-size:0.9rem;color:#666;}
+
+  .pricing-grid .card.featured{
+    border:2px solid var(--coral);
+    position:relative;
+  }
+  .pricing-grid .card.featured::before{
+    content:"ยอดนิยม";
+    position:absolute;top:-12px;left:50%;
+    transform:translateX(-50%);
+    background:var(--coral);
+    color:#fff;
+    font-size:0.75rem;
+    padding:4px 12px;
+    border-radius:20px;
+  }
+  .price{
+    font-size:1.8rem;
+    font-weight:bold;
+    color:var(--mustard);
+    margin:0.5rem 0;
+  }
+
+  .gallery-grid div{
+    background:var(--teal);
+    opacity:0.15;
+    border-radius:12px;
+    aspect-ratio:4/3;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--teal);
+    font-size:2rem;
+  }
+
+  footer{
+    background:var(--teal);
+    color:#fff;
+    text-align:center;
+    padding:2.5rem 1.5rem;
+  }
+  footer h3{margin-bottom:0.5rem;}
+  footer p{margin-bottom:1.2rem;}
+  footer .cta-btn{background:var(--mustard);color:var(--text-dark);}
+
+  @media(max-width:600px){
+    header.hero h1{font-size:1.6rem;}
+  }
+</style>
+</head>
+<body>
+
+<nav class="brandbar">
+  <span class="drone-icon">🚁</span>
+  <div class="brand-text">
+    <div class="en">MUM <span>SOONG</span> <span class="s2">Production</span></div>
+    <div class="th">มุมสูงโปรดักชั่น</div>
+  </div>
+</nav>
+
+<header class="hero">
+  <img src="images/hero.jpg" alt="Mum Soong Production - บริการบินโดรน">
+  <div class="overlay">
+    <h1>MUM SOONG <span class="accent">Production</span></h1>
+    <div class="subtitle">มุมสูงโปรดักชั่น</div>
+    <p>บริการรับบินโดรนถ่ายภาพและวิดีโอ FPV ด้วยใจรัก</p>
+    <a href="#contact" class="cta-btn">ขอใบเสนอราคา</a>
+  </div>
+</header>
+
+<section id="services">
+  <h2>บริการของเรา</h2>
+  <div class="services-grid">
+    <div class="card">
+      <div class="icon">📷</div>
+      <h3>ถ่ายภาพมุมสูง</h3>
+      <p>ภาพถ่ายความละเอียดสูง สำหรับงานแต่งงาน อสังหาริมทรัพย์ และอีเวนต์</p>
+    </div>
+    <div class="card">
+      <div class="icon">🎥</div>
+      <h3>วิดีโอซีนีมาติก</h3>
+      <p>วิดีโอ 4K/60fps ทั้งมุมสูงและ FPV สไตล์ภาพยนตร์</p>
+    </div>
+    <div class="card">
+      <div class="icon">🏗️</div>
+      <h3>สำรวจไซต์งาน</h3>
+      <p>ติดตามความคืบหน้าโครงการก่อสร้างจากมุมสูง</p>
+    </div>
+    <div class="card">
+      <div class="icon">🗺️</div>
+      <h3>ทำแผนที่/สำรวจที่ดิน</h3>
+      <p>ภาพถ่ายมุมสูงและแผนที่ 2D/3D เพื่อการวางแผน</p>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <h2>แพ็กเกจบริการ</h2>
+  <div class="pricing-grid">
+    <div class="card">
+      <h3>เบสิค</h3>
+      <div class="price">2,500 ฿</div>
+      <p>ภาพถ่าย 20 ภาพ พร้อมตัดต่อพื้นฐาน</p>
+    </div>
+    <div class="card featured">
+      <h3>มาตรฐาน</h3>
+      <div class="price">4,500 ฿</div>
+      <p>ภาพถ่าย + วิดีโอ 4K ตัดต่อเต็มรูปแบบ</p>
+    </div>
+    <div class="card">
+      <h3>พรีเมียม</h3>
+      <div class="price">8,000 ฿</div>
+      <p>บินทั้งวัน วิดีโอซีนีมาติกพร้อมเพลงประกอบ</p>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <h2>ผลงานล่าสุด</h2>
+  <div class="gallery-grid">
+    <div>📷</div>
+    <div>📷</div>
+    <div>📷</div>
+  </div>
+</section>
+
+<footer id="contact">
+  <h3>MUM SOONG Production</h3>
+  <p style="opacity:0.85;font-size:0.85rem;margin-bottom:1rem;">มุมสูงโปรดักชั่น</p>
+  <h3 style="margin-top:1.5rem;">ติดต่อขอใบเสนอราคา</h3>
+  <p>📞 095-129-2989 &nbsp;|&nbsp; 💬 Line: ncorbossy</p>
+  <a href="tel:0951292989" class="cta-btn">โทรเลย</a>
+</footer>
+
+</body>
+</html>
