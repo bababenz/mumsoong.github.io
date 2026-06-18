@@ -21,21 +21,30 @@
     color:var(--text-dark);
     line-height:1.6;
     overflow-x:hidden;
+    padding-top:68px;
   }
 
   /* ===== NAVBAR ===== */
   nav.brandbar{
-    position:relative;
-    background:#fff;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:50;
+    background:rgba(255,255,255,0.82);
+    backdrop-filter:blur(6px);
+    -webkit-backdrop-filter:blur(6px);
+    overflow:hidden;
     display:flex;
     align-items:center;
     justify-content:center;
     gap:0.6rem;
     padding:0.8rem 1rem;
     box-shadow:0 2px 10px rgba(0,0,0,0.08);
-    transition:box-shadow 0.3s;
+    transition:box-shadow 0.3s, background 0.3s;
   }
   nav.brandbar.scrolled{
+    background:rgba(255,255,255,0.95);
     box-shadow:0 4px 18px rgba(0,0,0,0.15);
   }
   nav.brandbar .drone-icon{
@@ -468,14 +477,14 @@
   <span class="b8">⭐</span>
 </div>
 
-  <nav class="brandbar" id="navbar">
+<nav class="brandbar" id="navbar">
   <span class="drone-icon">🚁</span>
   <div class="brand-text">
     <div class="en">MUM <span>SOONG</span> <span class="s2">Production</span></div>
     <div class="th">มุมสูงโปรดักชั่น</div>
   </div>
 </nav>
-  
+
 <header class="hero">
   <div class="cloud-shape c1"></div>
   <div class="cloud-shape c2"></div>
@@ -491,7 +500,7 @@
     <a href="#contact" class="cta-btn">ขอใบเสนอราคา</a>
   </div>
 </header>
-  
+
 <section id="services">
   <h2 class="reveal">บริการของเรา</h2>
   <div class="services-grid reveal">
