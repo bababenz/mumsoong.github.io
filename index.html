@@ -392,6 +392,41 @@
   footer .cta-btn{background:var(--mustard);color:var(--text-dark);}
   footer .cta-btn:hover{transform:translateY(-3px) scale(1.05);}
 
+  /* ===== AMBIENT FLOATING BACKGROUND (whole page) ===== */
+  .bg-floaters{
+    position:fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    overflow:hidden;
+    z-index:1;
+    pointer-events:none;
+  }
+  .bg-floaters span{
+    position:absolute;
+    opacity:0.35;
+    filter:drop-shadow(0 4px 6px rgba(0,0,0,0.08));
+    animation:bg-drift-up linear infinite;
+  }
+  @keyframes bg-drift-up{
+    0%{transform:translateY(110vh) translateX(0) rotate(0deg);}
+    50%{transform:translateY(50vh) translateX(20px) rotate(10deg);}
+    100%{transform:translateY(-10vh) translateX(-15px) rotate(-6deg);}
+  }
+  .bg-floaters .b1{left:5%;  font-size:1.6rem; animation-duration:26s; animation-delay:0s;}
+  .bg-floaters .b2{left:18%; font-size:1.1rem; animation-duration:34s; animation-delay:4s;}
+  .bg-floaters .b3{left:32%; font-size:1.8rem; animation-duration:30s; animation-delay:9s;}
+  .bg-floaters .b4{left:48%; font-size:1.2rem; animation-duration:22s; animation-delay:2s;}
+  .bg-floaters .b5{left:63%; font-size:1.6rem; animation-duration:36s; animation-delay:7s;}
+  .bg-floaters .b6{left:77%; font-size:1.1rem; animation-duration:28s; animation-delay:13s;}
+  .bg-floaters .b7{left:88%; font-size:1.5rem; animation-duration:32s; animation-delay:5s;}
+  .bg-floaters .b8{left:40%; font-size:1rem;   animation-duration:24s; animation-delay:16s;}
+
+  /* keep real page content above the ambient layer */
+  nav.brandbar, header.hero, section, footer, #toTop, #musicToggle{
+    position:relative;
+    z-index:2;
+  }
+
   /* back to top button */
   #toTop{
     position:fixed;
@@ -423,6 +458,17 @@
 </style>
 </head>
 <body>
+
+<div class="bg-floaters" aria-hidden="true">
+  <span class="b1">☁️</span>
+  <span class="b2">✨</span>
+  <span class="b3">🚁</span>
+  <span class="b4">⭐</span>
+  <span class="b5">☁️</span>
+  <span class="b6">✨</span>
+  <span class="b7">🪁</span>
+  <span class="b8">⭐</span>
+</div>
 
 <nav class="brandbar" id="navbar">
   <span class="drone-icon">🚁</span>
