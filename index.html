@@ -13,12 +13,16 @@
     --text-dark:#3a3a3a;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
   body{
     font-family:'Segoe UI',Tahoma,sans-serif;
     background:var(--cream);
     color:var(--text-dark);
     line-height:1.6;
+    overflow-x:hidden;
   }
+
+  /* ===== NAVBAR ===== */
   nav.brandbar{
     position:sticky;
     top:0;
@@ -30,23 +34,28 @@
     gap:0.6rem;
     padding:0.8rem 1rem;
     box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    transition:box-shadow 0.3s;
   }
-  nav.brandbar .drone-icon{font-size:1.6rem;}
-  nav.brandbar .brand-text{
-    text-align:left;
-    line-height:1.1;
+  nav.brandbar.scrolled{
+    box-shadow:0 4px 18px rgba(0,0,0,0.15);
   }
-  nav.brandbar .brand-text .en{
-    font-weight:800;
-    font-size:1.15rem;
-    letter-spacing:0.5px;
+  nav.brandbar .drone-icon{
+    font-size:1.6rem;
+    display:inline-block;
+    animation:hover-bob 3s ease-in-out infinite;
   }
+  nav.brandbar .brand-text{text-align:left;line-height:1.1;}
+  nav.brandbar .brand-text .en{font-weight:800;font-size:1.15rem;letter-spacing:0.5px;}
   nav.brandbar .brand-text .en span{color:var(--coral);}
   nav.brandbar .brand-text .en span.s2{color:var(--teal);}
-  nav.brandbar .brand-text .th{
-    font-size:0.8rem;
-    color:#888;
+  nav.brandbar .brand-text .th{font-size:0.8rem;color:#888;}
+
+  @keyframes hover-bob{
+    0%,100%{transform:translateY(0) rotate(0deg);}
+    50%{transform:translateY(-4px) rotate(-6deg);}
   }
+
+  /* ===== HERO ===== */
   header.hero{
     position:relative;
     text-align:center;
@@ -59,11 +68,17 @@
     max-height:600px;
     object-fit:cover;
     object-position:center 30%;
+    transform:scale(1.05);
+    animation:hero-zoom 18s ease-in-out infinite alternate;
+  }
+  @keyframes hero-zoom{
+    0%{transform:scale(1.05);}
+    100%{transform:scale(1.15);}
   }
   header.hero .overlay{
     position:absolute;
     bottom:0;left:0;right:0;
-    background:linear-gradient(to top, rgba(0,0,0,0.55), transparent);
+    background:linear-gradient(to top, rgba(0,0,0,0.6), transparent 70%);
     padding:2rem 1rem;
   }
   header.hero h1{
@@ -71,6 +86,8 @@
     font-weight:800;
     letter-spacing:1px;
     text-shadow:0 3px 8px rgba(0,0,0,0.6);
+    opacity:0;
+    animation:fade-up 0.9s ease-out 0.2s forwards;
   }
   header.hero h1 .accent{color:var(--mustard);}
   header.hero .subtitle{
@@ -78,12 +95,40 @@
     font-weight:600;
     margin-top:0.3rem;
     text-shadow:0 2px 6px rgba(0,0,0,0.6);
+    opacity:0;
+    animation:fade-up 0.9s ease-out 0.4s forwards;
   }
   header.hero p{
     font-size:1.1rem;
     margin-top:0.5rem;
     text-shadow:0 1px 4px rgba(0,0,0,0.5);
+    opacity:0;
+    animation:fade-up 0.9s ease-out 0.6s forwards;
   }
+  @keyframes fade-up{
+    from{opacity:0; transform:translateY(18px);}
+    to{opacity:1; transform:translateY(0);}
+  }
+
+  /* floating drone silhouettes in hero */
+  .floaty{
+    position:absolute;
+    font-size:1.8rem;
+    opacity:0.55;
+    filter:drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+    animation:float-around 12s ease-in-out infinite;
+    pointer-events:none;
+  }
+  .floaty.f1{top:12%; left:8%; animation-duration:10s;}
+  .floaty.f2{top:20%; right:10%; animation-duration:14s; animation-delay:1.5s;}
+  .floaty.f3{top:55%; left:5%; animation-duration:16s; animation-delay:3s; font-size:1.3rem;}
+  @keyframes float-around{
+    0%,100%{transform:translate(0,0) rotate(0deg);}
+    25%{transform:translate(15px,-20px) rotate(8deg);}
+    50%{transform:translate(-10px,-35px) rotate(-6deg);}
+    75%{transform:translate(10px,-15px) rotate(4deg);}
+  }
+
   .cta-btn{
     display:inline-block;
     margin-top:1rem;
@@ -94,10 +139,21 @@
     text-decoration:none;
     font-weight:bold;
     box-shadow:0 4px 10px rgba(0,0,0,0.2);
-    transition:transform 0.2s;
+    transition:transform 0.2s, box-shadow 0.2s;
+    opacity:0;
+    animation:fade-up 0.9s ease-out 0.8s forwards, pulse-glow 2.4s ease-in-out 2s infinite;
+    position:relative;
   }
-  .cta-btn:hover{transform:translateY(-2px);}
+  .cta-btn:hover{
+    transform:translateY(-3px) scale(1.04);
+    box-shadow:0 8px 18px rgba(0,0,0,0.3);
+  }
+  @keyframes pulse-glow{
+    0%,100%{box-shadow:0 4px 10px rgba(0,0,0,0.2), 0 0 0 0 rgba(240,138,126,0.5);}
+    50%{box-shadow:0 4px 10px rgba(0,0,0,0.2), 0 0 0 10px rgba(240,138,126,0);}
+  }
 
+  /* ===== SECTIONS / SCROLL REVEAL ===== */
   section{
     max-width:1000px;
     margin:0 auto;
@@ -108,22 +164,74 @@
     color:var(--teal);
     font-size:1.8rem;
     margin-bottom:2rem;
+    position:relative;
   }
+  h2::after{
+    content:"";
+    display:block;
+    width:50px;
+    height:4px;
+    background:var(--mustard);
+    margin:10px auto 0;
+    border-radius:4px;
+    transform:scaleX(0);
+    transition:transform 0.5s ease 0.2s;
+  }
+  .reveal.in-view h2::after{transform:scaleX(1);}
+
+  .reveal{
+    opacity:0;
+    transform:translateY(30px);
+    transition:opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.in-view{
+    opacity:1;
+    transform:translateY(0);
+  }
+
   .services-grid, .pricing-grid, .gallery-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
     gap:1.2rem;
   }
+
   .card{
     background:#fff;
     border-radius:16px;
     padding:1.5rem;
     text-align:center;
     box-shadow:0 4px 12px rgba(0,0,0,0.06);
-    transition:transform 0.2s;
+    transition:transform 0.25s, box-shadow 0.25s;
+    opacity:0;
+    transform:translateY(24px);
   }
-  .card:hover{transform:translateY(-4px);}
-  .card .icon{font-size:2.2rem;margin-bottom:0.5rem;}
+  .reveal.in-view .card{
+    animation:card-pop 0.6s ease forwards;
+  }
+  .services-grid.reveal.in-view .card:nth-child(1){animation-delay:0.05s;}
+  .services-grid.reveal.in-view .card:nth-child(2){animation-delay:0.15s;}
+  .services-grid.reveal.in-view .card:nth-child(3){animation-delay:0.25s;}
+  .services-grid.reveal.in-view .card:nth-child(4){animation-delay:0.35s;}
+  .services-grid.reveal.in-view .card:nth-child(5){animation-delay:0.45s;}
+  .pricing-grid.reveal.in-view .card:nth-child(1){animation-delay:0.05s;}
+  .pricing-grid.reveal.in-view .card:nth-child(2){animation-delay:0.2s;}
+  .pricing-grid.reveal.in-view .card:nth-child(3){animation-delay:0.35s;}
+  @keyframes card-pop{
+    to{opacity:1; transform:translateY(0);}
+  }
+  .card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 24px rgba(0,0,0,0.12);
+  }
+  .card .icon{
+    font-size:2.2rem;
+    margin-bottom:0.5rem;
+    display:inline-block;
+    transition:transform 0.3s;
+  }
+  .card:hover .icon{
+    transform:scale(1.2) rotate(-8deg);
+  }
   .card h3{color:var(--teal);margin-bottom:0.5rem;}
   .card p{font-size:0.9rem;color:#666;}
 
@@ -140,6 +248,11 @@
     font-size:0.75rem;
     padding:4px 12px;
     border-radius:20px;
+    animation:badge-wiggle 2.5s ease-in-out infinite;
+  }
+  @keyframes badge-wiggle{
+    0%,100%{transform:translateX(-50%) rotate(0deg);}
+    50%{transform:translateX(-50%) rotate(-4deg);}
   }
   .price{
     font-size:1.8rem;
@@ -148,11 +261,7 @@
     margin:0.5rem 0;
   }
 
- .gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:1.2rem;
-  }
+  /* ===== GALLERY ===== */
   .gallery-grid .video-wrap{
     background:#000;
     border-radius:16px;
@@ -160,6 +269,12 @@
     box-shadow:0 4px 12px rgba(0,0,0,0.1);
     aspect-ratio:9/16;
     position:relative;
+    opacity:0;
+    transform:translateY(24px);
+  }
+  .reveal.in-view .video-wrap,
+  .reveal.in-view .video-card{
+    animation:card-pop 0.6s ease forwards;
   }
   .gallery-grid .video-wrap iframe{
     width:100%;
@@ -167,7 +282,7 @@
     border:none;
     display:block;
   }
-    .gallery-grid .video-card{
+  .gallery-grid .video-card{
     background:linear-gradient(135deg,#2b2b2b,#1a1a1a);
     border-radius:16px;
     overflow:hidden;
@@ -181,14 +296,25 @@
     padding:1.5rem;
     text-decoration:none;
     color:#fff;
-    transition:transform 0.2s;
+    transition:transform 0.25s, box-shadow 0.25s;
+    opacity:0;
+    transform:translateY(24px);
+    position:relative;
   }
+  .gallery-grid.reveal.in-view .video-card:nth-child(2){animation-delay:0.1s;}
+  .gallery-grid.reveal.in-view .video-card:nth-child(3){animation-delay:0.2s;}
+  .gallery-grid.reveal.in-view .video-card:nth-child(4){animation-delay:0.3s;}
   .gallery-grid .video-card:hover{
-    transform:translateY(-4px) scale(1.02);
+    transform:translateY(-6px) scale(1.03);
+    box-shadow:0 14px 26px rgba(0,0,0,0.25);
   }
   .gallery-grid .video-card .play-icon{
     font-size:3rem;
     margin-bottom:0.8rem;
+    transition:transform 0.3s;
+  }
+  .gallery-grid .video-card:hover .play-icon{
+    transform:scale(1.2);
   }
   .gallery-grid .video-card .label{
     font-weight:700;
@@ -200,24 +326,53 @@
     opacity:0.75;
   }
 
+  /* ===== FOOTER ===== */
   footer{
     background:var(--teal);
     color:#fff;
     text-align:center;
     padding:2.5rem 1.5rem;
+    position:relative;
+    overflow:hidden;
   }
   footer h3{margin-bottom:0.5rem;}
   footer p{margin-bottom:1.2rem;}
   footer .cta-btn{background:var(--mustard);color:var(--text-dark);}
+  footer .cta-btn:hover{transform:translateY(-3px) scale(1.05);}
+
+  /* back to top button */
+  #toTop{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:var(--coral);
+    color:#fff;
+    width:46px;
+    height:46px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1.3rem;
+    box-shadow:0 4px 12px rgba(0,0,0,0.25);
+    text-decoration:none;
+    opacity:0;
+    transform:translateY(20px);
+    transition:opacity 0.3s, transform 0.3s;
+    z-index:60;
+  }
+  #toTop.show{opacity:1; transform:translateY(0);}
+  #toTop:hover{transform:translateY(-4px) scale(1.08);}
 
   @media(max-width:600px){
     header.hero h1{font-size:1.6rem;}
+    .floaty{font-size:1.3rem;}
   }
 </style>
 </head>
 <body>
 
-<nav class="brandbar">
+<nav class="brandbar" id="navbar">
   <span class="drone-icon">🚁</span>
   <div class="brand-text">
     <div class="en">MUM <span>SOONG</span> <span class="s2">Production</span></div>
@@ -226,6 +381,9 @@
 </nav>
 
 <header class="hero">
+  <span class="floaty f1">🚁</span>
+  <span class="floaty f2">✨</span>
+  <span class="floaty f3">☁️</span>
   <img src="images/hero.jpg" alt="Mum Soong Production - บริการบินโดรน">
   <div class="overlay">
     <h1>MUM SOONG <span class="accent">Production</span></h1>
@@ -236,8 +394,8 @@
 </header>
 
 <section id="services">
-  <h2>บริการของเรา</h2>
-  <div class="services-grid">
+  <h2 class="reveal">บริการของเรา</h2>
+  <div class="services-grid reveal">
     <div class="card">
       <div class="icon">📷</div>
       <h3>ถ่ายภาพมุมสูง</h3>
@@ -267,8 +425,8 @@
 </section>
 
 <section id="pricing">
-  <h2>แพ็กเกจบริการ</h2>
-  <div class="pricing-grid">
+  <h2 class="reveal">แพ็กเกจบริการ</h2>
+  <div class="pricing-grid reveal">
     <div class="card">
       <h3>เบสิค</h3>
       <div class="price">2,500 ฿</div>
@@ -292,8 +450,8 @@
 </section>
 
 <section id="gallery">
-  <h2>ผลงานล่าสุด</h2>
-  <div class="gallery-grid">
+  <h2 class="reveal">ผลงานล่าสุด</h2>
+  <div class="gallery-grid reveal">
     <div class="video-wrap">
        <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F780253781721651%2F&show_text=false&width=267&t=0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
@@ -315,13 +473,44 @@
   </div>
 </section>
 
-<footer id="contact">
+<footer id="contact" class="reveal">
   <h3>MUM SOONG Production</h3>
   <p style="opacity:0.85;font-size:0.85rem;margin-bottom:1rem;">มุมสูงโปรดักชั่น</p>
   <h3 style="margin-top:1.5rem;">ติดต่อขอใบเสนอราคา</h3>
   <p>📞 095-129-2989 &nbsp;|&nbsp; 💬 Line: ncorbossy</p>
   <a href="tel:0951292989" class="cta-btn">โทรเลย</a>
 </footer>
+
+<a href="#top" id="toTop" aria-label="กลับไปด้านบน">↑</a>
+
+<script>
+  // Scroll reveal using IntersectionObserver
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('in-view');
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => observer.observe(el));
+
+  // Navbar shadow on scroll + back to top button visibility
+  const navbar = document.getElementById('navbar');
+  const toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', () => {
+    if(window.scrollY > 20){
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+    if(window.scrollY > 400){
+      toTop.classList.add('show');
+    } else {
+      toTop.classList.remove('show');
+    }
+  });
+</script>
 
 </body>
 </html>
