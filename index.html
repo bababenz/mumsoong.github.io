@@ -58,17 +58,14 @@
     -webkit-backdrop-filter:blur(15px);
     border:1px solid rgba(255,255,255,.3);
     border-radius:18px;
-    box-shadow:
-      0 8px 32px rgba(0,0,0,.08);
+    box-shadow:0 8px 32px rgba(0,0,0,.08);
     z-index:9999;
     transition:.3s ease;
-}
-nav.brandbar.scrolled{
+  }
+  nav.brandbar.scrolled{
     background:rgba(255,255,255,.92);
-    box-shadow:
-      0 12px 40px rgba(0,0,0,.15);
-}
-    
+    box-shadow:0 12px 40px rgba(0,0,0,.15);
+  }
   nav.brandbar .drone-icon{
     font-size:1.6rem;
     display:inline-block;
@@ -86,161 +83,92 @@ nav.brandbar.scrolled{
   }
 
   /* ===== HERO ===== */
-  .hero-brand{
-
-    text-align:center;
-
-}
-
-.hero-brand .en{
-    font-size:3rem;
-    font-weight:800;
-    letter-spacing:1px;
+  .hero-brand{text-align:center;}
+  .hero-brand .en{
+    font-size:3rem;font-weight:800;letter-spacing:1px;
     text-shadow:0 3px 8px rgba(0,0,0,.6);
-}
-.hero-brand .en span{
-    color:var(--coral);
-}
-.hero-brand .en .s2{
-    color:var(--teal);
-}
-.hero-brand .th{
-    font-size:1.3rem;
-    font-weight:600;
-    margin-top:.3rem;
+  }
+  .hero-brand .en span{color:var(--coral);}
+  .hero-brand .en .s2{color:var(--teal);}
+  .hero-brand .th{
+    font-size:1.3rem;font-weight:600;margin-top:.3rem;
     text-shadow:0 2px 6px rgba(0,0,0,.6);
-}
+  }
   header.hero{
-    position:relative;
-    text-align:center;
-    color:#fff;
-    overflow:hidden;
+    position:relative;text-align:center;color:#fff;overflow:hidden;
     background:linear-gradient(180deg, #aee2ff 0%, #6ec3f4 45%, #2f80c4 100%);
-    min-height:420px;
-    display:flex;
-    align-items:flex-end;
-    justify-content:center;
+    min-height:420px;display:flex;align-items:flex-end;justify-content:center;
+    padding-top:90px;
   }
   header.hero img{
-    position:absolute;
-    top:0;left:0;
-    width:100%;
-    height:100%;
-    display:block;
-    object-fit:cover;
-    object-position:center 30%;
+    position:absolute;top:0;left:0;width:100%;height:100%;
+    display:block;object-fit:cover;object-position:center 30%;
     transform:scale(1.05);
-    animation:hero-zoom 18s ease-in-out infinite alternate;
-    z-index:0;
+    animation:hero-zoom 18s ease-in-out infinite alternate;z-index:0;
   }
   @keyframes hero-zoom{
-    0%{transform:scale(1.05);}
-    100%{transform:scale(1.15);}
+    0%{transform:scale(1.05);}100%{transform:scale(1.15);}
   }
   header.hero .overlay{
-    position:relative;
-    z-index:2;
-    width:100%;
+    position:relative;z-index:2;width:100%;
     background:linear-gradient(to top, rgba(10,40,70,0.75), transparent 90%);
     padding:2rem 1rem;
   }
   header.hero h1{
     font-family:'Segoe UI','Helvetica Neue',Arial,'Noto Sans Thai',sans-serif;
-    font-size:2.6rem;
-    font-weight:800;
-    letter-spacing:1px;
+    font-size:2.6rem;font-weight:800;letter-spacing:1px;
     text-shadow:0 3px 8px rgba(0,0,0,0.6);
-    opacity:0;
-    animation:fade-up 0.9s ease-out 0.2s forwards;
+    opacity:0;animation:fade-up 0.9s ease-out 0.2s forwards;
   }
   header.hero h1 .accent{color:var(--mustard);}
   header.hero .subtitle{
-    font-size:1.3rem;
-    font-weight:600;
-    margin-top:0.3rem;
+    font-size:1.3rem;font-weight:600;margin-top:0.3rem;
     text-shadow:0 2px 6px rgba(0,0,0,0.6);
-    opacity:0;
-    animation:fade-up 0.9s ease-out 0.4s forwards;
+    opacity:0;animation:fade-up 0.9s ease-out 0.4s forwards;
   }
   header.hero p{
-    font-size:1.1rem;
-    margin-top:0.5rem;
+    font-size:1.1rem;margin-top:0.5rem;
     text-shadow:0 1px 4px rgba(0,0,0,0.5);
-    opacity:0;
-    animation:fade-up 0.9s ease-out 0.6s forwards;
+    opacity:0;animation:fade-up 0.9s ease-out 0.6s forwards;
   }
-  
-  header.hero{
-    padding-top:90px;
-}
-  .hero-brand .en{
-    color:#000;
-}
-.hero-brand .en span{
-    color:var(--coral);
-}
-.hero-brand .en .s2{
-    color:var(--teal);
-}
+  .hero-brand .en{color:#000;}
+  .hero-brand .en span{color:var(--coral);}
+  .hero-brand .en .s2{color:var(--teal);}
   @keyframes fade-up{
-    from{opacity:0; transform:translateY(18px);}
-    to{opacity:1; transform:translateY(0);}
+    from{opacity:0;transform:translateY(18px);}
+    to{opacity:1;transform:translateY(0);}
   }
 
-  /* CSS drawn clouds drifting across the sky */
   .cloud-shape{
-    position:absolute;
-    background:#fff;
-    border-radius:50px;
-    opacity:0.85;
-    filter:drop-shadow(0 6px 8px rgba(0,0,0,0.08));
-    pointer-events:none;
+    position:absolute;background:#fff;border-radius:50px;
+    opacity:0.85;filter:drop-shadow(0 6px 8px rgba(0,0,0,0.08));pointer-events:none;
   }
-  .cloud-shape::before, .cloud-shape::after{
-    content:"";
-    position:absolute;
-    background:#fff;
-    border-radius:50%;
+  .cloud-shape::before,.cloud-shape::after{
+    content:"";position:absolute;background:#fff;border-radius:50%;
   }
-  .cloud-shape.c1{
-    width:120px; height:40px; top:8%; left:-130px;
-    animation:drift 22s linear infinite;
-  }
-  .cloud-shape.c1::before{width:60px; height:60px; top:-30px; left:15px;}
-  .cloud-shape.c1::after{width:45px; height:45px; top:-20px; left:60px;}
-  .cloud-shape.c2{
-    width:90px; height:32px; top:28%; left:-110px;
-    animation:drift 28s linear infinite;
-    animation-delay:6s;
-  }
-  .cloud-shape.c2::before{width:45px; height:45px; top:-22px; left:10px;}
-  .cloud-shape.c2::after{width:35px; height:35px; top:-15px; left:45px;}
-  .cloud-shape.c3{
-    width:140px; height:45px; top:62%; left:-150px;
-    animation:drift 32s linear infinite;
-    animation-delay:2s;
-    opacity:0.6;
-  }
-  .cloud-shape.c3::before{width:65px; height:65px; top:-32px; left:20px;}
-  .cloud-shape.c3::after{width:50px; height:50px; top:-22px; left:70px;}
+  .cloud-shape.c1{width:120px;height:40px;top:8%;left:-130px;animation:drift 22s linear infinite;}
+  .cloud-shape.c1::before{width:60px;height:60px;top:-30px;left:15px;}
+  .cloud-shape.c1::after{width:45px;height:45px;top:-20px;left:60px;}
+  .cloud-shape.c2{width:90px;height:32px;top:28%;left:-110px;animation:drift 28s linear infinite;animation-delay:6s;}
+  .cloud-shape.c2::before{width:45px;height:45px;top:-22px;left:10px;}
+  .cloud-shape.c2::after{width:35px;height:35px;top:-15px;left:45px;}
+  .cloud-shape.c3{width:140px;height:45px;top:62%;left:-150px;animation:drift 32s linear infinite;animation-delay:2s;opacity:0.6;}
+  .cloud-shape.c3::before{width:65px;height:65px;top:-32px;left:20px;}
+  .cloud-shape.c3::after{width:50px;height:50px;top:-22px;left:70px;}
   @keyframes drift{
     from{transform:translateX(0);}
     to{transform:translateX(calc(100vw + 200px));}
   }
 
-  /* floating drone silhouettes in hero */
   .floaty{
-    position:absolute;
-    font-size:1.8rem;
-    opacity:0.55;
+    position:absolute;font-size:1.8rem;opacity:0.55;
     filter:drop-shadow(0 4px 6px rgba(0,0,0,0.3));
-    animation:float-around 12s ease-in-out infinite;
-    pointer-events:none;
+    animation:float-around 12s ease-in-out infinite;pointer-events:none;
   }
-  .floaty.f1{top:32%; left:8%; animation-duration:10s;}
-  .floaty.f2{top:20%; right:10%; animation-duration:14s; animation-delay:1.5s;}
-  .floaty.f3{top:55%; left:5%; animation-duration:16s; animation-delay:3s; font-size:1.3rem;}
-  .floaty.f4{top:40%; right:20%; animation-duration:14s; animation-delay:1.5s;}
+  .floaty.f1{top:32%;left:8%;animation-duration:10s;}
+  .floaty.f2{top:20%;right:10%;animation-duration:14s;animation-delay:1.5s;}
+  .floaty.f3{top:55%;left:5%;animation-duration:16s;animation-delay:3s;font-size:1.3rem;}
+  .floaty.f4{top:40%;right:20%;animation-duration:14s;animation-delay:1.5s;}
   @keyframes float-around{
     0%,100%{transform:translate(0,0) rotate(0deg);}
     25%{transform:translate(15px,-20px) rotate(8deg);}
@@ -249,84 +177,169 @@ nav.brandbar.scrolled{
   }
 
   .cta-btn{
-    display:inline-block;
-    margin-top:1rem;
-    background:var(--coral);
-    color:#fff;
-    padding:0.8rem 2rem;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:bold;
-    box-shadow:0 4px 10px rgba(0,0,0,0.2);
-    transition:transform 0.2s, box-shadow 0.2s;
+    display:inline-block;margin-top:1rem;background:var(--coral);color:#fff;
+    padding:0.8rem 2rem;border-radius:30px;text-decoration:none;font-weight:bold;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);transition:transform 0.2s,box-shadow 0.2s;
     opacity:0;
     animation:fade-up 0.9s ease-out 0.8s forwards, pulse-glow 2.4s ease-in-out 2s infinite;
     position:relative;
   }
-  .cta-btn:hover{
-    transform:translateY(-3px) scale(1.04);
-    box-shadow:0 8px 18px rgba(0,0,0,0.3);
-  }
+  .cta-btn:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 8px 18px rgba(0,0,0,0.3);}
   @keyframes pulse-glow{
-    0%,100%{box-shadow:0 4px 10px rgba(0,0,0,0.2), 0 0 0 0 rgba(240,138,126,0.5);}
-    50%{box-shadow:0 4px 10px rgba(0,0,0,0.2), 0 0 0 10px rgba(240,138,126,0);}
+    0%,100%{box-shadow:0 4px 10px rgba(0,0,0,0.2),0 0 0 0 rgba(240,138,126,0.5);}
+    50%{box-shadow:0 4px 10px rgba(0,0,0,0.2),0 0 0 10px rgba(240,138,126,0);}
   }
 
-  /* ===== SECTIONS / SCROLL REVEAL ===== */
+  /* ===== SECTION DIVIDERS & HEADERS ===== */
+  .section-wrap{
+    position:relative;
+    overflow:hidden;
+  }
+
+  /* Wave divider top */
+  .wave-top{
+    display:block;
+    width:100%;
+    overflow:hidden;
+    line-height:0;
+    margin-bottom:-2px;
+  }
+  .wave-top svg{display:block;width:100%;}
+
+  /* Particle dots bg for sections */
+  .section-wrap.sky-bg{
+    background:linear-gradient(160deg,#e8f6ff 0%,#d0edff 50%,#bce4ff 100%);
+  }
+  .section-wrap.white-bg{
+    background:#fff;
+  }
+  .section-wrap.deep-bg{
+    background:linear-gradient(160deg,#1a3a5c 0%,#2f80c4 60%,#1a3a5c 100%);
+  }
+
+  /* Floating bokeh dots inside sections */
+  .bokeh{
+    position:absolute;pointer-events:none;inset:0;overflow:hidden;z-index:0;
+  }
+  .bokeh span{
+    position:absolute;border-radius:50%;opacity:0;
+    animation:bokeh-float linear infinite;
+  }
+  @keyframes bokeh-float{
+    0%{opacity:0;transform:translateY(0) scale(0.5);}
+    20%{opacity:1;}
+    80%{opacity:0.6;}
+    100%{opacity:0;transform:translateY(-120px) scale(1.2);}
+  }
+
   section{
+    position:relative;
+    z-index:1;
     max-width:1000px;
     margin:0 auto;
     padding:3rem 1.5rem;
   }
-  h2{
+
+  /* ===== ANIMATED SECTION HEADINGS ===== */
+  .section-heading{
     text-align:center;
-    color:var(--teal);
-    font-size:1.8rem;
-    margin-bottom:2rem;
+    margin-bottom:2.5rem;
     position:relative;
   }
+  .section-heading .eyebrow{
+    display:inline-block;
+    font-size:0.75rem;
+    font-weight:700;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:var(--coral);
+    margin-bottom:0.5rem;
+    opacity:0;
+    transform:translateY(10px);
+    transition:opacity 0.5s ease, transform 0.5s ease;
+  }
+  .section-heading h2{
+    font-size:2rem;
+    font-weight:800;
+    color:var(--teal);
+    margin-bottom:0;
+    position:relative;
+    display:inline-block;
+  }
+  /* deep-bg variant */
+  .deep-bg .section-heading h2{color:#fff;}
+  .deep-bg .section-heading .eyebrow{color:var(--mustard);}
+
+  /* animated underline bar that wiggles */
+  .section-heading .bar-wrap{
+    display:flex;align-items:center;justify-content:center;gap:6px;
+    margin-top:10px;
+    opacity:0;transform:scaleX(0);
+    transition:opacity 0.5s ease 0.3s, transform 0.5s ease 0.3s;
+    transform-origin:center;
+  }
+  .section-heading .bar{
+    height:4px;border-radius:4px;background:var(--mustard);
+  }
+  .section-heading .bar.b1{width:16px;}
+  .section-heading .bar.b2{width:40px;animation:bar-pulse 2s ease-in-out infinite;}
+  .section-heading .bar.b3{width:16px;}
+  @keyframes bar-pulse{
+    0%,100%{transform:scaleX(1);}
+    50%{transform:scaleX(1.3);}
+  }
+
+  /* drone icon that orbits heading on hover */
+  .section-heading .drone-orbit{
+    display:inline-block;
+    font-size:1.4rem;
+    opacity:0;
+    transition:opacity 0.4s ease 0.5s;
+    animation:orbit-float 3s ease-in-out infinite;
+    margin-left:8px;
+    vertical-align:middle;
+  }
+  @keyframes orbit-float{
+    0%,100%{transform:translateY(0) rotate(0deg);}
+    50%{transform:translateY(-6px) rotate(-10deg);}
+  }
+
+  /* in-view triggers */
+  .reveal.in-view .section-heading .eyebrow{opacity:1;transform:translateY(0);}
+  .reveal.in-view .section-heading .bar-wrap{opacity:1;transform:scaleX(1);}
+  .reveal.in-view .section-heading .drone-orbit{opacity:1;}
+
+  /* ===== OLD h2 (keep for reveal) ===== */
+  h2{
+    text-align:center;color:var(--teal);font-size:1.8rem;
+    margin-bottom:2rem;position:relative;
+  }
   h2::after{
-    content:"";
-    display:block;
-    width:50px;
-    height:4px;
-    background:var(--mustard);
-    margin:10px auto 0;
-    border-radius:4px;
-    transform:scaleX(0);
-    transition:transform 0.5s ease 0.2s;
+    content:"";display:block;width:50px;height:4px;
+    background:var(--mustard);margin:10px auto 0;border-radius:4px;
+    transform:scaleX(0);transition:transform 0.5s ease 0.2s;
   }
   .reveal.in-view h2::after{transform:scaleX(1);}
 
   .reveal{
-    opacity:0;
-    transform:translateY(30px);
-    transition:opacity 0.7s ease, transform 0.7s ease;
+    opacity:0;transform:translateY(30px);
+    transition:opacity 0.7s ease,transform 0.7s ease;
   }
-  .reveal.in-view{
-    opacity:1;
-    transform:translateY(0);
-  }
+  .reveal.in-view{opacity:1;transform:translateY(0);}
 
-  .services-grid, .pricing-grid, .gallery-grid{
+  /* ===== CARDS ===== */
+  .services-grid,.pricing-grid,.gallery-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
     gap:1.2rem;
   }
-
   .card{
-    background:#fff;
-    border-radius:16px;
-    padding:1.5rem;
-    text-align:center;
+    background:#fff;border-radius:16px;padding:1.5rem;text-align:center;
     box-shadow:0 4px 12px rgba(0,0,0,0.06);
-    transition:transform 0.25s, box-shadow 0.25s;
-    opacity:0;
-    transform:translateY(24px);
+    transition:transform 0.25s,box-shadow 0.25s;
+    opacity:0;transform:translateY(24px);
   }
-  .reveal.in-view .card{
-    animation:card-pop 0.6s ease forwards;
-  }
+  .reveal.in-view .card{animation:card-pop 0.6s ease forwards;}
   .services-grid.reveal.in-view .card:nth-child(1){animation-delay:0.05s;}
   .services-grid.reveal.in-view .card:nth-child(2){animation-delay:0.15s;}
   .services-grid.reveal.in-view .card:nth-child(3){animation-delay:0.25s;}
@@ -335,194 +348,256 @@ nav.brandbar.scrolled{
   .pricing-grid.reveal.in-view .card:nth-child(1){animation-delay:0.05s;}
   .pricing-grid.reveal.in-view .card:nth-child(2){animation-delay:0.2s;}
   .pricing-grid.reveal.in-view .card:nth-child(3){animation-delay:0.35s;}
-  @keyframes card-pop{
-    to{opacity:1; transform:translateY(0);}
-  }
-  .card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 12px 24px rgba(0,0,0,0.12);
-  }
-  .card .icon{
-    font-size:2.2rem;
-    margin-bottom:0.5rem;
-    display:inline-block;
-    transition:transform 0.3s;
-  }
-  .card:hover .icon{
-    transform:scale(1.2) rotate(-8deg);
-  }
+  @keyframes card-pop{to{opacity:1;transform:translateY(0);}}
+  .card:hover{transform:translateY(-8px);box-shadow:0 12px 24px rgba(0,0,0,0.12);}
+  .card .icon{font-size:2.2rem;margin-bottom:0.5rem;display:inline-block;transition:transform 0.3s;}
+  .card:hover .icon{transform:scale(1.2) rotate(-8deg);}
   .card h3{color:var(--teal);margin-bottom:0.5rem;}
   .card p{font-size:0.9rem;color:#666;}
 
-  .pricing-grid .card.featured{
-    border:2px solid var(--coral);
-    position:relative;
-  }
+  .pricing-grid .card.featured{border:2px solid var(--coral);position:relative;}
   .pricing-grid .card.featured::before{
-    content:"ยอดนิยม";
-    position:absolute;top:-12px;left:50%;
-    transform:translateX(-50%);
-    background:var(--coral);
-    color:#fff;
-    font-size:0.75rem;
-    padding:4px 12px;
-    border-radius:20px;
+    content:"ยอดนิยม";position:absolute;top:-12px;left:50%;
+    transform:translateX(-50%);background:var(--coral);color:#fff;
+    font-size:0.75rem;padding:4px 12px;border-radius:20px;
     animation:badge-wiggle 2.5s ease-in-out infinite;
   }
   @keyframes badge-wiggle{
     0%,100%{transform:translateX(-50%) rotate(0deg);}
     50%{transform:translateX(-50%) rotate(-4deg);}
   }
-  .price{
-    font-size:1.8rem;
-    font-weight:bold;
-    color:var(--mustard);
-    margin:0.5rem 0;
+  .price{font-size:1.8rem;font-weight:bold;color:var(--mustard);margin:0.5rem 0;}
+
+  /* ===== GALLERY — PREMIUM ===== */
+  .gallery-grid{
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:1.4rem;
+    align-items:start;
   }
 
-  /* ===== GALLERY ===== */
+  /* Main embed — keeps 9:16 */
   .gallery-grid .video-wrap{
-    background:#000;
-    border-radius:16px;
-    overflow:hidden;
-    box-shadow:0 4px 12px rgba(0,0,0,0.1);
-    aspect-ratio:9/16;
     position:relative;
+    border-radius:20px;
+    overflow:hidden;
+    aspect-ratio:9/16;
     opacity:0;
     transform:translateY(24px);
+    /* layered glow ring */
+    box-shadow:
+      0 0 0 2px rgba(255,194,51,0.5),
+      0 0 0 5px rgba(47,128,196,0.25),
+      0 20px 50px rgba(0,0,0,0.4);
+    transition:box-shadow 0.4s ease, transform 0.4s ease;
   }
-  .reveal.in-view .video-wrap,
-  .reveal.in-view .video-card{
-    animation:card-pop 0.6s ease forwards;
+  .gallery-grid .video-wrap:hover{
+    transform:translateY(-6px) scale(1.02);
+    box-shadow:
+      0 0 0 2px rgba(255,122,104,0.8),
+      0 0 0 6px rgba(255,122,104,0.2),
+      0 28px 60px rgba(0,0,0,0.5);
+  }
+  /* shimmer scan line on embed */
+  .gallery-grid .video-wrap::after{
+    content:"";
+    position:absolute;inset:0;
+    background:linear-gradient(180deg,
+      transparent 0%,
+      rgba(255,255,255,0.04) 50%,
+      transparent 100%);
+    background-size:100% 8px;
+    pointer-events:none;
+    z-index:3;
+    animation:scanline 4s linear infinite;
+  }
+  @keyframes scanline{
+    0%{background-position:0 0;}
+    100%{background-position:0 400px;}
   }
   .gallery-grid .video-wrap iframe{
-    width:100%;
-    height:100%;
-    border:none;
-    display:block;
+    width:100%;height:100%;border:none;display:block;position:relative;z-index:2;
   }
+
+  /* LIVE badge on first video */
+  .gallery-grid .video-wrap .live-badge{
+    position:absolute;top:12px;left:12px;z-index:4;
+    background:rgba(255,60,60,0.92);color:#fff;
+    font-size:0.65rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;
+    padding:3px 10px;border-radius:20px;
+    display:flex;align-items:center;gap:5px;
+    box-shadow:0 2px 8px rgba(255,60,60,0.5);
+    animation:live-pulse 1.5s ease-in-out infinite;
+  }
+  .live-badge .dot{
+    width:6px;height:6px;border-radius:50%;background:#fff;
+    animation:live-dot 1.5s ease-in-out infinite;
+  }
+  @keyframes live-pulse{
+    0%,100%{box-shadow:0 2px 8px rgba(255,60,60,0.5);}
+    50%{box-shadow:0 2px 16px rgba(255,60,60,0.9);}
+  }
+  @keyframes live-dot{
+    0%,100%{opacity:1;}50%{opacity:0;}
+  }
+
+  /* Premium video cards */
   .gallery-grid .video-card{
-    background:linear-gradient(135deg,#2f80c4,#1a3a5c);
-    border-radius:16px;
-    overflow:hidden;
-    box-shadow:0 4px 12px rgba(0,0,0,0.15);
-    aspect-ratio:9/16;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:1.5rem;
-    text-decoration:none;
-    color:#fff;
-    transition:transform 0.25s, box-shadow 0.25s;
-    opacity:0;
-    transform:translateY(24px);
     position:relative;
+    border-radius:20px;
+    overflow:hidden;
+    aspect-ratio:9/16;
+    display:flex;flex-direction:column;align-items:center;justify-content:flex-end;
+    text-align:center;padding:1.5rem 1.2rem;
+    text-decoration:none;color:#fff;
+    opacity:0;transform:translateY(24px);
+    transition:transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow:0 12px 32px rgba(0,0,0,0.3);
+    /* premium dark glass look */
+    background:linear-gradient(145deg,#0d2137,#1a3a5c,#0d2137);
   }
+
+  /* Glass reflection overlay */
+  .gallery-grid .video-card::before{
+    content:"";
+    position:absolute;inset:0;
+    background:linear-gradient(135deg,
+      rgba(255,255,255,0.12) 0%,
+      transparent 50%,
+      rgba(255,255,255,0.04) 100%);
+    z-index:0;pointer-events:none;
+    transition:opacity 0.3s ease;
+  }
+  .gallery-grid .video-card:hover::before{opacity:0.5;}
+
+  /* Ambient glow lines */
+  .gallery-grid .video-card::after{
+    content:"";
+    position:absolute;
+    top:-40%;left:-40%;
+    width:180%;height:180%;
+    background:radial-gradient(ellipse at center,
+      rgba(47,128,196,0.2) 0%,
+      transparent 60%);
+    z-index:0;pointer-events:none;
+    animation:card-glow-rotate 6s ease-in-out infinite alternate;
+  }
+  @keyframes card-glow-rotate{
+    0%{transform:rotate(0deg) scale(1);}
+    100%{transform:rotate(30deg) scale(1.1);}
+  }
+
   .gallery-grid.reveal.in-view .video-card:nth-child(2){animation-delay:0.1s;}
   .gallery-grid.reveal.in-view .video-card:nth-child(3){animation-delay:0.2s;}
   .gallery-grid.reveal.in-view .video-card:nth-child(4){animation-delay:0.3s;}
   .gallery-grid .video-card:hover{
-    transform:translateY(-6px) scale(1.03);
-    box-shadow:0 14px 26px rgba(0,0,0,0.25);
+    transform:translateY(-8px) scale(1.03);
+    box-shadow:
+      0 0 0 1.5px rgba(255,194,51,0.6),
+      0 24px 50px rgba(0,0,0,0.45);
+  }
+
+  /* Card thumbnail placeholder art */
+  .video-card .thumb-art{
+    position:absolute;inset:0;z-index:0;overflow:hidden;
+  }
+  .video-card .thumb-art .horizon{
+    position:absolute;bottom:35%;width:100%;height:1px;
+    background:linear-gradient(90deg,transparent,rgba(174,226,255,0.4),transparent);
+  }
+  .video-card .thumb-art .glow-orb{
+    position:absolute;border-radius:50%;filter:blur(30px);
+  }
+
+  /* Card content sits above overlays */
+  .video-card .card-content{
+    position:relative;z-index:2;width:100%;
+    background:linear-gradient(to top,rgba(0,0,0,0.7) 0%,transparent 100%);
+    padding:1.2rem 0.8rem 0.5rem;
+    border-radius:0 0 12px 12px;
+    margin:-1.5rem -1.2rem;
+    margin-top:auto;
+    width:calc(100% + 2.4rem);
   }
   .gallery-grid .video-card .play-icon{
-    font-size:3rem;
-    margin-bottom:0.8rem;
+    position:relative;z-index:2;
+    font-size:3rem;margin-bottom:0.6rem;
     transition:transform 0.3s;
+    filter:drop-shadow(0 4px 12px rgba(255,194,51,0.6));
+    display:block;
+    align-self:center;
+    margin-top:auto;
   }
-  .gallery-grid .video-card:hover .play-icon{
-    transform:scale(1.2);
-  }
+  .gallery-grid .video-card:hover .play-icon{transform:scale(1.25);}
   .gallery-grid .video-card .label{
-    font-weight:700;
-    font-size:1.05rem;
-    margin-bottom:0.4rem;
+    font-weight:800;font-size:0.9rem;letter-spacing:2px;
+    text-transform:uppercase;margin-bottom:0.35rem;
+    color:var(--mustard);
+    text-shadow:0 2px 8px rgba(0,0,0,0.5);
   }
   .gallery-grid .video-card .sub{
-    font-size:0.8rem;
-    opacity:0.75;
+    font-size:0.82rem;opacity:0.9;line-height:1.4;
+    text-shadow:0 1px 4px rgba(0,0,0,0.6);
   }
+
+  /* View more tag on cards */
+  .video-card .view-tag{
+    display:inline-flex;align-items:center;gap:4px;
+    margin-top:0.6rem;
+    font-size:0.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;
+    background:rgba(255,255,255,0.12);
+    border:1px solid rgba(255,255,255,0.2);
+    padding:3px 10px;border-radius:20px;
+    backdrop-filter:blur(4px);
+    transition:background 0.2s;
+  }
+  .video-card:hover .view-tag{background:rgba(255,194,51,0.25);}
+
+  .reveal.in-view .video-wrap,
+  .reveal.in-view .video-card{animation:card-pop 0.6s ease forwards;}
 
   /* ===== FOOTER ===== */
   footer{
-    background:var(--teal);
-    color:#fff;
-    text-align:center;
-    padding:2.5rem 1.5rem;
-    position:relative;
-    overflow:hidden;
+    background:var(--teal);color:#fff;text-align:center;
+    padding:2.5rem 1.5rem;position:relative;overflow:hidden;
   }
   footer h3{margin-bottom:0.5rem;}
   footer p{margin-bottom:1.2rem;}
   footer .cta-btn{background:var(--mustard);color:var(--text-dark);}
   footer .cta-btn:hover{transform:translateY(-3px) scale(1.05);}
 
-  /* ===== AMBIENT FLOATING BACKGROUND (whole page) ===== */
-  .bg-floaters{
-    position:fixed;
-    top:0; left:0;
-    width:100%; height:100%;
-    overflow:hidden;
-    z-index:1;
-    pointer-events:none;
-  }
-  .bg-floaters span{
-    position:absolute;
-    opacity:0.35;
-    filter:drop-shadow(0 4px 6px rgba(0,0,0,0.08));
-    animation:bg-drift-up linear infinite;
-  }
+  /* ===== AMBIENT BACKGROUND ===== */
+  .bg-floaters{position:fixed;top:0;left:0;width:100%;height:100%;overflow:hidden;z-index:1;pointer-events:none;}
+  .bg-floaters span{position:absolute;opacity:0.35;filter:drop-shadow(0 4px 6px rgba(0,0,0,0.08));animation:bg-drift-up linear infinite;}
   @keyframes bg-drift-up{
     0%{transform:translateY(110vh) translateX(0) rotate(0deg);}
     50%{transform:translateY(50vh) translateX(20px) rotate(10deg);}
     100%{transform:translateY(-10vh) translateX(-15px) rotate(-6deg);}
   }
-  .bg-floaters .b1{left:5%;  font-size:1.6rem; animation-duration:26s; animation-delay:0s;}
-  .bg-floaters .b2{left:18%; font-size:1.1rem; animation-duration:34s; animation-delay:4s;}
-  .bg-floaters .b3{left:32%; font-size:1.8rem; animation-duration:30s; animation-delay:9s;}
-  .bg-floaters .b4{left:48%; font-size:1.2rem; animation-duration:22s; animation-delay:2s;}
-  .bg-floaters .b5{left:63%; font-size:1.6rem; animation-duration:36s; animation-delay:7s;}
-  .bg-floaters .b6{left:77%; font-size:1.1rem; animation-duration:28s; animation-delay:13s;}
-  .bg-floaters .b7{left:88%; font-size:1.5rem; animation-duration:32s; animation-delay:5s;}
-  .bg-floaters .b8{left:40%; font-size:1rem;   animation-duration:24s; animation-delay:16s;}
+  .bg-floaters .b1{left:5%;font-size:1.6rem;animation-duration:26s;animation-delay:0s;}
+  .bg-floaters .b2{left:18%;font-size:1.1rem;animation-duration:34s;animation-delay:4s;}
+  .bg-floaters .b3{left:32%;font-size:1.8rem;animation-duration:30s;animation-delay:9s;}
+  .bg-floaters .b4{left:48%;font-size:1.2rem;animation-duration:22s;animation-delay:2s;}
+  .bg-floaters .b5{left:63%;font-size:1.6rem;animation-duration:36s;animation-delay:7s;}
+  .bg-floaters .b6{left:77%;font-size:1.1rem;animation-duration:28s;animation-delay:13s;}
+  .bg-floaters .b7{left:88%;font-size:1.5rem;animation-duration:32s;animation-delay:5s;}
+  .bg-floaters .b8{left:40%;font-size:1rem;animation-duration:24s;animation-delay:16s;}
 
-  /* keep real page content above the ambient layer */
-   header.hero, section, footer,#musicToggle{
-    position:relative;
-    z-index:2;
-  }
+  header.hero,section,footer,#musicToggle{position:relative;z-index:2;}
 
-  /* back to top button */
   #toTop{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:var(--coral);
-    color:#fff;
-    width:46px;
-    height:46px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:1.3rem;
-    box-shadow:0 4px 12px rgba(0,0,0,0.25);
-    text-decoration:none;
-    opacity:0;
-    transform:translateY(20px);
-    transition:opacity 0.3s, transform 0.3s;
-    z-index:60;
+    position:fixed;bottom:20px;right:20px;background:var(--coral);color:#fff;
+    width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    font-size:1.3rem;box-shadow:0 4px 12px rgba(0,0,0,0.25);text-decoration:none;
+    opacity:0;transform:translateY(20px);transition:opacity 0.3s,transform 0.3s;z-index:60;
   }
-  #toTop.show{opacity:1; transform:translateY(0);}
+  #toTop.show{opacity:1;transform:translateY(0);}
   #toTop:hover{transform:translateY(-4px) scale(1.08);}
 
   @media(max-width:600px){
     header.hero h1{font-size:1.6rem;}
     .floaty{font-size:1.3rem;}
   }
-</style>
+  </style>
 </head>
 <body>
 
@@ -535,14 +610,9 @@ nav.brandbar.scrolled{
 </nav>
 
 <div class="bg-floaters" aria-hidden="true">
-  <span class="b1">☁️</span>
-  <span class="b2">✨</span>
-  <span class="b3">🚁</span>
-  <span class="b4">⭐</span>
-  <span class="b5">☁️</span>
-  <span class="b6">✨</span>
-  <span class="b7">🪁</span>
-  <span class="b8">⭐</span>
+  <span class="b1">☁️</span><span class="b2">✨</span><span class="b3">🚁</span>
+  <span class="b4">⭐</span><span class="b5">☁️</span><span class="b6">✨</span>
+  <span class="b7">🪁</span><span class="b8">⭐</span>
 </div>
 
 <header class="hero">
@@ -553,99 +623,146 @@ nav.brandbar.scrolled{
   <span class="floaty f2">☀️</span>
   <span class="floaty f3">🦅</span>
   <span class="floaty f4">🛸</span>
-  <img src="images/hero.jpg" alt="Mum Soong Production - บริการบินโดรน" onerror="this.style.display='none'">
+  <img src="hero.jpg" alt="Mum Soong Production - บริการบินโดรน" onerror="this.style.display='none'">
   <div class="overlay">
     <div class="hero-brand">
-    <div class="en">
-        MUM <span>SOONG</span>
-        <span class="s2">Production</span>
+      <div class="en">MUM <span>SOONG</span><span class="s2"> Production</span></div>
+      <div class="th">มุมสูงโปรดักชั่น</div>
     </div>
-    <div class="th">มุมสูงโปรดักชั่น</div>
-</div>
     <p>บริการถ่ายภาพและวิดีโอมุมสูง Cinematic Footage FPV </p>
     <a href="#contact" class="cta-btn">ขอใบเสนอราคา</a>
   </div>
 </header>
 
-<section id="services">
-  <h2 class="reveal">บริการของเรา</h2>
-  <div class="services-grid reveal">
-    <div class="card">
-      <div class="icon">📷</div>
-      <h3>ถ่ายภาพมุมสูง</h3>
-      <p>ภาพถ่ายความละเอียดสูง สำหรับงานแต่งงาน อสังหาริมทรัพย์ และอีเวนต์</p>
-    </div>
-    <div class="card">
-      <div class="icon">🎥</div>
-      <h3>วิดีโอซีนีมาติก</h3>
-      <p>วิดีโอ 4K/60fps ทั้งมุมสูงและ FPV สไตล์ภาพยนตร์</p>
-    </div>
-     <div class="card">
-      <div class="icon">🛑</div>
-      <h3>ไลฟ์สด/Streaming</h3>
-      <p>แพร่ภาพสด เพื่อชมภาพบรรยากาศแบบเรียลไทม์</p>
-    </div>
-    <div class="card">
-      <div class="icon">🏗️</div>
-      <h3>สำรวจไซต์งาน</h3>
-      <p>ติดตามความคืบหน้าโครงการก่อสร้างจากมุมสูง</p>
-    </div>
-    <div class="card">
-      <div class="icon">🗺️</div>
-      <h3>ทำแผนที่/สำรวจที่ดิน</h3>
-      <p>ภาพถ่ายมุมสูงและแผนที่ 2D/3D เพื่อการวางแผน</p>
-    </div>
-  </div>
-</section>
+<!-- ===== SERVICES SECTION ===== -->
+<!-- Wave divider -->
+<div style="background:linear-gradient(180deg,#aee2ff,#2f80c4);line-height:0;">
+  <svg viewBox="0 0 1200 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
+    <path d="M0,0 C300,60 900,0 1200,50 L1200,60 L0,60 Z" fill="#e8f6ff"/>
+  </svg>
+</div>
 
-<section id="pricing">
-  <h2 class="reveal">แพ็กเกจบริการ</h2>
-  <div class="pricing-grid reveal">
-    <div class="card">
-      <h3>เบสิค</h3>
-      <div class="price">2,500 ฿</div>
-      <p>ภาพถ่าย 20 ภาพ พร้อมตัดต่อพื้นฐาน</p>
-      <p>หรือ</p>
-      <p>ถ่ายวิดีโอ 4K 1 ไฟล์ พร้อมตัดต่อพื้นฐาน</p>
+<div class="section-wrap sky-bg" style="position:relative;">
+  <!-- bokeh dots -->
+  <div class="bokeh" id="bokeh-services"></div>
+  <section id="services">
+    <div class="section-heading reveal">
+      <div class="eyebrow">✈️ What We Do</div>
+      <h2>บริการของเรา <span class="drone-orbit">🚁</span></h2>
+      <div class="bar-wrap"><div class="bar b1"></div><div class="bar b2"></div><div class="bar b3"></div></div>
     </div>
-    <div class="card featured">
-      <h3>มาตรฐาน</h3>
-      <div class="price">4,500 ฿</div>
-      <p>ภาพถ่าย + วิดีโอ 4K ตัดต่อพื้นฐาน</p>
-      <p>(ส่งแก้ได้ 1 รอบ)</p>
+    <div class="services-grid reveal">
+      <div class="card"><div class="icon">📷</div><h3>ถ่ายภาพมุมสูง</h3><p>ภาพถ่ายความละเอียดสูง สำหรับงานแต่งงาน อสังหาริมทรัพย์ และอีเวนต์</p></div>
+      <div class="card"><div class="icon">🎥</div><h3>วิดีโอซีนีมาติก</h3><p>วิดีโอ 4K/60fps ทั้งมุมสูงและ FPV สไตล์ภาพยนตร์</p></div>
+      <div class="card"><div class="icon">🛑</div><h3>ไลฟ์สด/Streaming</h3><p>แพร่ภาพสด เพื่อชมภาพบรรยากาศแบบเรียลไทม์</p></div>
+      <div class="card"><div class="icon">🏗️</div><h3>สำรวจไซต์งาน</h3><p>ติดตามความคืบหน้าโครงการก่อสร้างจากมุมสูง</p></div>
+      <div class="card"><div class="icon">🗺️</div><h3>ทำแผนที่/สำรวจที่ดิน</h3><p>ภาพถ่ายมุมสูงและแผนที่ 2D/3D เพื่อการวางแผน</p></div>
     </div>
-    <div class="card">
-      <h3>พรีเมียม</h3>
-      <div class="price">8,000 ฿</div>
-      <p>บินทั้งวัน ภาพถ่าย + วิดีโอ 4K วิดีโอซีนีมาติกพร้อมเพลงประกอบ ตัดต่อเต็มรูปแบบ</p>
-      <p>(ส่งแก้ได้ 3 รอบ)</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="gallery">
-  <h2 class="reveal">ผลงานล่าสุด</h2>
-  <div class="gallery-grid reveal">
-    <div class="video-wrap">
-       <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F780253781721651%2F&show_text=false&width=267&t=0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+  <!-- Wave bottom -->
+  <svg viewBox="0 0 1200 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block;width:100%;height:60px;line-height:0;">
+    <path d="M0,60 C400,0 800,60 1200,20 L1200,0 L0,0 Z" fill="#fff"/>
+  </svg>
+</div>
+
+<!-- ===== PRICING SECTION ===== -->
+<div class="section-wrap white-bg" style="position:relative;">
+  <section id="pricing">
+    <div class="section-heading reveal">
+      <div class="eyebrow">💎 Packages</div>
+      <h2>แพ็กเกจบริการ <span class="drone-orbit">💰</span></h2>
+      <div class="bar-wrap"><div class="bar b1"></div><div class="bar b2"></div><div class="bar b3"></div></div>
     </div>
-   <a class="video-card" href="https://www.facebook.com/reel/1672670740616866" target="_blank" rel="noopener">
-      <div class="play-icon">▶️</div>
-      <div class="label">HIGHLIGHTS</div>
-      <div class="sub">💦 MaeSotWaterFight 2026 🔥</div>
-    </a>
-    <a class="video-card" href="https://www.facebook.com/reel/978228678286875" target="_blank" rel="noopener">
-      <div class="play-icon">▶️</div>
-      <div class="label">HIGHLIGHTS</div>
-      <div class="sub">rainy season! ☔💙</div>
-    </a>
-    <a class="video-card" href="https://www.facebook.com/reel/1789515795756219" target="_blank" rel="noopener">
-      <div class="play-icon">▶️</div>
-      <div class="label">HIGHLIGHTS</div>
-      <div class="sub">บ.แม่ปิงพนากิจ-ทางหลวง3114🛣️</div>
-    </a>
-  </div>
-</section>
+    <div class="pricing-grid reveal">
+      <div class="card">
+        <h3>เบสิค</h3>
+        <div class="price">2,500 ฿</div>
+        <p>ภาพถ่าย 20 ภาพ พร้อมตัดต่อพื้นฐาน</p><p>หรือ</p>
+        <p>ถ่ายวิดีโอ 4K 1 ไฟล์ พร้อมตัดต่อพื้นฐาน</p>
+      </div>
+      <div class="card featured">
+        <h3>มาตรฐาน</h3>
+        <div class="price">4,500 ฿</div>
+        <p>ภาพถ่าย + วิดีโอ 4K ตัดต่อพื้นฐาน</p><p>(ส่งแก้ได้ 1 รอบ)</p>
+      </div>
+      <div class="card">
+        <h3>พรีเมียม</h3>
+        <div class="price">8,000 ฿</div>
+        <p>บินทั้งวัน ภาพถ่าย + วิดีโอ 4K วิดีโอซีนีมาติกพร้อมเพลงประกอบ ตัดต่อเต็มรูปแบบ</p>
+        <p>(ส่งแก้ได้ 3 รอบ)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave bottom -->
+  <svg viewBox="0 0 1200 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
+    <path d="M0,0 C300,60 900,0 1200,40 L1200,60 L0,60 Z" fill="#1a3a5c"/>
+  </svg>
+</div>
+
+<!-- ===== GALLERY SECTION (deep bg) ===== -->
+<div class="section-wrap deep-bg" style="position:relative;">
+  <!-- subtle star particles -->
+  <div class="bokeh" id="bokeh-gallery"></div>
+  <section id="gallery">
+    <div class="section-heading reveal">
+      <div class="eyebrow" style="color:var(--mustard);">🎬 Recent Work</div>
+      <h2 style="color:#fff;">ผลงานล่าสุด <span class="drone-orbit">🎥</span></h2>
+      <div class="bar-wrap"><div class="bar b1"></div><div class="bar b2"></div><div class="bar b3"></div></div>
+    </div>
+    <div class="gallery-grid reveal">
+      <div class="video-wrap">
+        <div class="live-badge"><span class="dot"></span>FEATURED</div>
+        <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F780253781721651%2F&show_text=false&width=267&t=0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <a class="video-card" href="https://www.facebook.com/reel/1672670740616866" target="_blank" rel="noopener">
+        <div class="thumb-art">
+          <div class="glow-orb" style="width:120px;height:120px;top:10%;left:20%;background:rgba(255,100,80,0.3);"></div>
+          <div class="glow-orb" style="width:80px;height:80px;bottom:30%;right:15%;background:rgba(47,128,196,0.3);"></div>
+          <div class="horizon"></div>
+        </div>
+        <span class="play-icon">▶️</span>
+        <div class="card-content">
+          <div class="label">HIGHLIGHTS</div>
+          <div class="sub">💦 MaeSotWaterFight 2026 🔥</div>
+          <div class="view-tag">ดูคลิป →</div>
+        </div>
+      </a>
+      <a class="video-card" href="https://www.facebook.com/reel/978228678286875" target="_blank" rel="noopener">
+        <div class="thumb-art">
+          <div class="glow-orb" style="width:100px;height:100px;top:15%;right:20%;background:rgba(174,226,255,0.25);"></div>
+          <div class="glow-orb" style="width:60px;height:60px;bottom:25%;left:10%;background:rgba(255,194,51,0.2);"></div>
+          <div class="horizon"></div>
+        </div>
+        <span class="play-icon">▶️</span>
+        <div class="card-content">
+          <div class="label">HIGHLIGHTS</div>
+          <div class="sub">rainy season! ☔💙</div>
+          <div class="view-tag">ดูคลิป →</div>
+        </div>
+      </a>
+      <a class="video-card" href="https://www.facebook.com/reel/1789515795756219" target="_blank" rel="noopener">
+        <div class="thumb-art">
+          <div class="glow-orb" style="width:90px;height:90px;top:20%;left:15%;background:rgba(100,200,100,0.2);"></div>
+          <div class="glow-orb" style="width:70px;height:70px;bottom:20%;right:20%;background:rgba(255,122,104,0.25);"></div>
+          <div class="horizon"></div>
+        </div>
+        <span class="play-icon">▶️</span>
+        <div class="card-content">
+          <div class="label">HIGHLIGHTS</div>
+          <div class="sub">บ.แม่ปิงพนากิจ-ทางหลวง3114🛣️</div>
+          <div class="view-tag">ดูคลิป →</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Wave bottom -->
+  <svg viewBox="0 0 1200 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
+    <path d="M0,20 C400,60 800,0 1200,40 L1200,60 L0,60 Z" fill="#2f80c4"/>
+  </svg>
+</div>
 
 <footer id="contact" class="reveal">
   <h3>MUM SOONG Production</h3>
@@ -658,33 +775,41 @@ nav.brandbar.scrolled{
 <a href="#top" id="toTop" aria-label="กลับไปด้านบน">↑</a>
 
 <script>
-  // Scroll reveal using IntersectionObserver
-  const revealEls = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('in-view');
-      }
-    });
-  }, { threshold: 0.15 });
-  revealEls.forEach(el => observer.observe(el));
+  // Bokeh particles
+  function makeBokeh(containerId, colors, count){
+    const el = document.getElementById(containerId);
+    if(!el) return;
+    for(let i=0;i<count;i++){
+      const s = document.createElement('span');
+      const size = 6 + Math.random()*20;
+      s.style.cssText = `
+        width:${size}px;height:${size}px;
+        left:${Math.random()*100}%;
+        bottom:${Math.random()*20}%;
+        background:${colors[Math.floor(Math.random()*colors.length)]};
+        animation-duration:${8+Math.random()*12}s;
+        animation-delay:${Math.random()*10}s;
+      `;
+      el.appendChild(s);
+    }
+  }
+  makeBokeh('bokeh-services',['rgba(47,128,196,0.25)','rgba(255,194,51,0.2)','rgba(174,226,255,0.3)'],18);
+  makeBokeh('bokeh-gallery',['rgba(255,255,255,0.15)','rgba(255,194,51,0.15)','rgba(174,226,255,0.1)'],22);
 
-  // Navbar shadow on scroll + back to top button visibility
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{if(e.isIntersecting) e.target.classList.add('in-view');});
+  },{threshold:0.12});
+  revealEls.forEach(el=>observer.observe(el));
+
+  // Navbar + back to top
   const navbar = document.getElementById('navbar');
   const toTop = document.getElementById('toTop');
-  window.addEventListener('scroll', () => {
-    if(window.scrollY > 20){
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-    if(window.scrollY > 400){
-      toTop.classList.add('show');
-    } else {
-      toTop.classList.remove('show');
-    }
+  window.addEventListener('scroll',()=>{
+    navbar.classList.toggle('scrolled', window.scrollY > 20);
+    toTop.classList.toggle('show', window.scrollY > 400);
   });
 </script>
-
 </body>
 </html>
