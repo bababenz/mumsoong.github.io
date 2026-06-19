@@ -48,6 +48,14 @@ nav.brandbar .brand-text .th{font-size:0.8rem;color:#888;}
 .hero-brand .en span{color:var(--coral);}
 .hero-brand .en .s2{color:var(--skylight);}
 .hero-brand .th{font-size:1.3rem;font-weight:600;margin-top:.3rem;text-shadow:0 2px 6px rgba(0,0,0,.6);}
+.hero-brand .en{
+  font-size:3.5rem;
+  font-weight:900;
+  letter-spacing:2px;
+}
+.hero-brand .en .s2{
+  color:white;
+}
 header.hero{
   position:relative;text-align:center;color:#fff;overflow:hidden;
   background:linear-gradient(180deg,#aee2ff 0%,#6ec3f4 45%,#2f80c4 100%);
@@ -303,6 +311,35 @@ header.hero,section,footer{position:relative;z-index:2;}
 #toTop.show{opacity:1;transform:translateY(0);}
 #toTop:hover{transform:translateY(-4px) scale(1.08);}
 @media(max-width:600px){.floaty{font-size:1.3rem;}}
+
+.hero-stats{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-top:25px;
+}
+.stat-item{
+  background:rgba(255,255,255,.15);
+  backdrop-filter:blur(10px);
+  padding:12px 20px;
+  border-radius:16px;
+  min-width:110px;
+}
+.stat-item strong{
+  display:block;
+  font-size:1.4rem;
+  color:#fff;
+}
+.stat-item span{
+  font-size:.8rem;
+  opacity:.9;
+}
+.stats{
+ display:flex;
+ justify-content:center;
+ gap:40px;
+}
 </style>
 </head>
 <body>
@@ -337,6 +374,23 @@ header.hero,section,footer{position:relative;z-index:2;}
     <p>บริการถ่ายภาพและวิดีโอมุมสูง Cinematic Footage FPV</p>
     <a href="#contact" class="cta-btn">ขอใบเสนอราคา</a>
   </div>
+  <div class="hero-stats">
+🏆 100+ Projects
+🎥 500+ Flight Hours
+📍 Thailand & Myanmar
+  <div class="stat-item">
+    <strong>100+</strong>
+    <span>Projects</span>
+  </div>
+  <div class="stat-item">
+    <strong>500+</strong>
+    <span>Flight Hours</span>
+  </div>
+  <div class="stat-item">
+    <strong>4K</strong>
+    <span>Cinematic Footage</span>
+  </div>
+</div>
 </header>
 
 <!-- wave hero→services -->
