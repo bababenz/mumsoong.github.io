@@ -319,21 +319,24 @@ header.hero,section,footer{position:relative;z-index:2;}
   flex-wrap:wrap;
   margin-top:25px;
 }
+.hero-stats{
+    display:flex;
+    justify-content:center;
+    gap:8px;
+    margin-top:18px;
+}
 .stat-item{
-  background:rgba(255,255,255,.15);
-  backdrop-filter:blur(10px);
-  padding:12px 20px;
-  border-radius:16px;
-  min-width:110px;
+    padding:8px 12px;
+    border-radius:12px;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(8px);
+    min-width:80px;
 }
 .stat-item strong{
-  display:block;
-  font-size:1.4rem;
-  color:#fff;
+    font-size:1rem;
 }
 .stat-item span{
-  font-size:.8rem;
-  opacity:.9;
+    font-size:.65rem;
 }
 .stats{
  display:flex;
@@ -373,11 +376,22 @@ header.hero,section,footer{position:relative;z-index:2;}
     </div>
     <p>บริการถ่ายภาพและวิดีโอมุมสูง Cinematic Footage FPV</p>
     <a href="#contact" class="cta-btn">ขอใบเสนอราคา</a>
+    <div class="hero-stats">
+    <div class="stat-item">
+        <strong>100+</strong>
+        <span>Projects</span>
+    </div>
+    <div class="stat-item">
+        <strong>500+</strong>
+        <span>Flight Hours</span>
+    </div>
+    <div class="stat-item">
+        <strong>4K</strong>
+        <span>Cinematic</span>
+    </div>
+</div>
   </div>
   <div class="hero-stats">
-🏆 100+ Projects
-🎥 500+ Flight Hours
-📍 Thailand & Myanmar
   <div class="stat-item">
     <strong>100+</strong>
     <span>Projects</span>
