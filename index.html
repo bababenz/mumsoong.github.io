@@ -15,24 +15,10 @@
 <meta name="twitter:image" content="https://bababenz.github.io/mumsoong/og-image.jpg">
 <title>Mum Soong Production - บริการถ่ายภาพมุมสูง</title>
 <style>
-:root{
-  --coral:#ff7a68;--teal:#2f80c4;--skylight:#aee2ff;
-  --mustard:#ffc233;--cream:#f4faff;--text-dark:#2c3e50;
-}
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
+:root{--coral:#ff7a68;--teal:#2f80c4;--skylight:#aee2ff;--mustard:#ffc233;--cream:#f4faff;--text-dark:#2c3e50;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
 body{font-family:'Segoe UI',Tahoma,sans-serif;background:var(--cream);color:var(--text-dark);line-height:1.6;overflow-x:hidden;}
-
-/* NAVBAR */
-nav.brandbar{
-  position:fixed;top:12px;left:50%;transform:translateX(-50%);
-  width:calc(100% - 24px);max-width:700px;
-  display:flex;align-items:center;justify-content:center;gap:12px;
-  padding:12px 20px;background:rgba(255,255,255,.78);
-  backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);
-  border:1px solid rgba(255,255,255,.3);border-radius:18px;
-  box-shadow:0 8px 32px rgba(0,0,0,.08);z-index:9999;transition:.3s ease;
-}
+nav.brandbar{position:fixed;top:12px;left:50%;transform:translateX(-50%);width:calc(100% - 24px);max-width:700px;display:flex;align-items:center;justify-content:center;gap:12px;padding:12px 20px;background:rgba(255,255,255,.78);backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);border:1px solid rgba(255,255,255,.3);border-radius:18px;box-shadow:0 8px 32px rgba(0,0,0,.08);z-index:9999;transition:.3s ease;}
 nav.brandbar.scrolled{background:rgba(255,255,255,.92);box-shadow:0 12px 40px rgba(0,0,0,.15);}
 nav.brandbar .drone-icon{font-size:1.6rem;display:inline-block;animation:hover-bob 3s ease-in-out infinite;}
 nav.brandbar .brand-text{text-align:left;line-height:1.1;}
@@ -41,28 +27,15 @@ nav.brandbar .brand-text .en span{color:var(--coral);}
 nav.brandbar .brand-text .en span.s2{color:var(--teal);}
 nav.brandbar .brand-text .th{font-size:0.8rem;color:#888;}
 @keyframes hover-bob{0%,100%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(-4px) rotate(-6deg);}}
-
-/* HERO — no image */
 .hero-brand{text-align:center;}
 .hero-brand .en{font-size:3rem;font-weight:800;letter-spacing:1px;text-shadow:0 3px 8px rgba(0,0,0,.6);}
 .hero-brand .en span{color:var(--coral);}
 .hero-brand .en .s2{color:var(--skylight);}
 .hero-brand .th{font-size:1.3rem;font-weight:600;margin-top:.3rem;text-shadow:0 2px 6px rgba(0,0,0,.6);}
-header.hero{
-  position:relative;text-align:center;color:#fff;overflow:hidden;
-  background:linear-gradient(180deg,#aee2ff 0%,#6ec3f4 45%,#2f80c4 100%);
-  min-height:420px;display:flex;align-items:flex-end;justify-content:center;
-  padding-top:90px;
-}
-header.hero .overlay{
-  position:relative;z-index:2;width:100%;
-  background:linear-gradient(to top,rgba(10,40,70,0.75),transparent 90%);
-  padding:2rem 1rem;
-}
+header.hero{position:relative;text-align:center;color:#fff;overflow:hidden;background:linear-gradient(180deg,#aee2ff 0%,#6ec3f4 45%,#2f80c4 100%);min-height:420px;display:flex;align-items:flex-end;justify-content:center;padding-top:90px;}
+header.hero .overlay{position:relative;z-index:2;width:100%;background:linear-gradient(to top,rgba(10,40,70,0.75),transparent 90%);padding:2rem 1rem;}
 header.hero p{font-size:1.1rem;margin-top:0.5rem;text-shadow:0 1px 4px rgba(0,0,0,0.5);opacity:0;animation:fade-up 0.9s ease-out 0.6s forwards;}
 @keyframes fade-up{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
-
-/* clouds */
 .cloud-shape{position:absolute;background:#fff;border-radius:50px;opacity:0.85;filter:drop-shadow(0 6px 8px rgba(0,0,0,0.08));pointer-events:none;}
 .cloud-shape::before,.cloud-shape::after{content:"";position:absolute;background:#fff;border-radius:50%;}
 .cloud-shape.c1{width:120px;height:40px;top:8%;left:-130px;animation:drift 22s linear infinite;}
@@ -75,8 +48,6 @@ header.hero p{font-size:1.1rem;margin-top:0.5rem;text-shadow:0 1px 4px rgba(0,0,
 .cloud-shape.c3::before{width:65px;height:65px;top:-32px;left:20px;}
 .cloud-shape.c3::after{width:50px;height:50px;top:-22px;left:70px;}
 @keyframes drift{from{transform:translateX(0);}to{transform:translateX(calc(100vw + 200px));}}
-
-/* floaty */
 .floaty{position:absolute;font-size:1.8rem;opacity:0.55;filter:drop-shadow(0 4px 6px rgba(0,0,0,0.3));animation:float-around 12s ease-in-out infinite;pointer-events:none;}
 .floaty.f1{top:32%;left:8%;animation-duration:10s;}
 .floaty.f2{top:20%;right:10%;animation-duration:14s;animation-delay:1.5s;}
@@ -84,86 +55,36 @@ header.hero p{font-size:1.1rem;margin-top:0.5rem;text-shadow:0 1px 4px rgba(0,0,
 .floaty.f4{top:40%;right:20%;animation-duration:14s;animation-delay:2.5s;}
 .floaty.f5{top:60%;right:18%;animation-duration:15s;animation-delay:2s;}
 @keyframes float-around{0%,100%{transform:translate(0,0) rotate(0deg);}25%{transform:translate(15px,-20px) rotate(8deg);}50%{transform:translate(-10px,-35px) rotate(-6deg);}75%{transform:translate(10px,-15px) rotate(4deg);}}
-
-.cta-btn{
-  display:inline-block;margin-top:1rem;background:var(--coral);color:#fff;
-  padding:0.8rem 2rem;border-radius:30px;text-decoration:none;font-weight:bold;
-  box-shadow:0 4px 10px rgba(0,0,0,0.2);transition:transform 0.2s,box-shadow 0.2s;
-  opacity:0;animation:fade-up 0.9s ease-out 0.8s forwards,pulse-glow 2.4s ease-in-out 2s infinite;
-}
+.cta-btn{display:inline-block;margin-top:1rem;background:var(--coral);color:#fff;padding:0.8rem 2rem;border-radius:30px;text-decoration:none;font-weight:bold;box-shadow:0 4px 10px rgba(0,0,0,0.2);transition:transform 0.2s,box-shadow 0.2s;opacity:0;animation:fade-up 0.9s ease-out 0.8s forwards,pulse-glow 2.4s ease-in-out 2s infinite;}
 .cta-btn:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 8px 18px rgba(0,0,0,0.3);}
 @keyframes pulse-glow{0%,100%{box-shadow:0 4px 10px rgba(0,0,0,0.2),0 0 0 0 rgba(240,138,126,0.5);}50%{box-shadow:0 4px 10px rgba(0,0,0,0.2),0 0 0 10px rgba(240,138,126,0);}}
-
-/* SECTION WRAPS */
+.hero-stats{display:flex;justify-content:center;gap:8px;margin-top:18px;}
+.stat-item{padding:8px 12px;border-radius:12px;background:rgba(255,255,255,.12);backdrop-filter:blur(8px);min-width:80px;}
+.stat-item strong{font-size:1rem;}
+.stat-item span{font-size:.65rem;}
 .section-wrap{position:relative;overflow:hidden;}
 .section-wrap.sky-bg{background:linear-gradient(160deg,#e8f6ff 0%,#d0edff 50%,#bce4ff 100%);}
 .section-wrap.white-bg{background:#fff;}
 .section-wrap.deep-bg{background:linear-gradient(160deg,#1a3a5c 0%,#2f80c4 60%,#1a3a5c 100%);}
-
 .bokeh{position:absolute;pointer-events:none;inset:0;overflow:hidden;z-index:0;}
 .bokeh span{position:absolute;border-radius:50%;opacity:0;animation:bokeh-float linear infinite;}
 @keyframes bokeh-float{0%{opacity:0;transform:translateY(0) scale(0.5);}20%{opacity:1;}80%{opacity:0.6;}100%{opacity:0;transform:translateY(-120px) scale(1.2);}}
-
 section{position:relative;z-index:1;max-width:1000px;margin:0 auto;padding:3rem 1.5rem;}
-
-/* ============================
-   SECTION HEADINGS — upgraded
-   ============================ */
-.section-heading{
-  text-align:center;margin-bottom:2.5rem;position:relative;
-}
-
-/* Animated eyebrow label */
-.section-heading .eyebrow{
-  display:inline-block;font-size:0.72rem;font-weight:800;
-  letter-spacing:4px;text-transform:uppercase;color:var(--coral);
-  margin-bottom:0.6rem;
-  opacity:0;transform:translateY(12px);
-  transition:opacity 0.5s ease,transform 0.5s ease;
-}
+.section-heading{text-align:center;margin-bottom:2.5rem;position:relative;}
+.section-heading .eyebrow{display:inline-block;font-size:0.72rem;font-weight:800;letter-spacing:4px;text-transform:uppercase;color:var(--coral);margin-bottom:0.6rem;opacity:0;transform:translateY(12px);transition:opacity 0.5s ease,transform 0.5s ease;}
 .deep-bg .section-heading .eyebrow{color:var(--mustard);}
-
-/* Main h2 */
-.section-heading h2{
-  font-size:2.1rem;font-weight:800;color:var(--teal);
-  margin-bottom:0;display:inline-block;position:relative;
-  /* text stroke shimmer on deep bg handled via color override */
-}
+.section-heading h2{font-size:2.1rem;font-weight:800;color:var(--teal);margin-bottom:0;display:inline-block;position:relative;}
 .deep-bg .section-heading h2{color:#fff;}
-
-/* Drone icon floats beside title */
-.section-heading .drone-orbit{
-  display:inline-block;font-size:1.5rem;
-  opacity:0;transition:opacity 0.4s ease 0.5s;
-  animation:orbit-float 3s ease-in-out infinite;
-  margin-left:10px;vertical-align:middle;
-}
+.section-heading .drone-orbit{display:inline-block;font-size:1.5rem;opacity:0;transition:opacity 0.4s ease 0.5s;animation:orbit-float 3s ease-in-out infinite;margin-left:10px;vertical-align:middle;}
 @keyframes orbit-float{0%,100%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(-7px) rotate(-12deg);}}
-
-/* Animated tri-bar under heading */
-.section-heading .bar-wrap{
-  display:flex;align-items:center;justify-content:center;gap:5px;
-  margin-top:12px;
-  opacity:0;transform:scaleX(0);transform-origin:center;
-  transition:opacity 0.5s ease 0.35s,transform 0.5s ease 0.35s;
-}
+.section-heading .bar-wrap{display:flex;align-items:center;justify-content:center;gap:5px;margin-top:12px;opacity:0;transform:scaleX(0);transform-origin:center;transition:opacity 0.5s ease 0.35s,transform 0.5s ease 0.35s;}
 .section-heading .bar{height:4px;border-radius:4px;background:var(--mustard);}
 .section-heading .bar.b1{width:14px;}
 .section-heading .bar.b2{width:44px;animation:bar-breathe 2.2s ease-in-out infinite;}
 .section-heading .bar.b3{width:14px;}
 @keyframes bar-breathe{0%,100%{transform:scaleX(1);opacity:1;}50%{transform:scaleX(1.35);opacity:0.7;}}
-
-/* Particle sparks that burst outward when heading enters view */
-.section-heading .sparks{
-  position:absolute;top:50%;left:50%;pointer-events:none;
-}
-.section-heading .spark{
-  position:absolute;width:6px;height:6px;border-radius:50%;
-  background:var(--mustard);opacity:0;
-  transform:translate(-50%,-50%);
-}
-
-/* in-view triggers — .section-heading itself carries .reveal */
+.section-heading .sparks{position:absolute;top:50%;left:50%;pointer-events:none;}
+.section-heading .spark{position:absolute;width:6px;height:6px;border-radius:50%;background:var(--mustard);opacity:0;transform:translate(-50%,-50%);}
 .section-heading.in-view .eyebrow{opacity:1;transform:translateY(0);}
 .section-heading.in-view .bar-wrap{opacity:1;transform:scaleX(1);}
 .section-heading.in-view .drone-orbit{opacity:1;}
@@ -176,50 +97,21 @@ section{position:relative;z-index:1;max-width:1000px;margin:0 auto;padding:3rem 
 .section-heading.in-view .spark:nth-child(6){animation-delay:0.42s;--angle:225deg;--dist:50px;}
 .section-heading.in-view .spark:nth-child(7){animation-delay:0.36s;--angle:270deg;--dist:65px;}
 .section-heading.in-view .spark:nth-child(8){animation-delay:0.44s;--angle:315deg;--dist:55px;}
-@keyframes spark-burst{
-  0%{opacity:1;transform:translate(-50%,-50%) rotate(var(--angle)) translateX(0);}
-  60%{opacity:0.9;}
-  100%{opacity:0;transform:translate(-50%,-50%) rotate(var(--angle)) translateX(var(--dist));}
-}
-
-/* Glowing halo ring behind heading on deep-bg */
-.section-heading .halo{
-  position:absolute;top:50%;left:50%;
-  width:220px;height:60px;
-  transform:translate(-50%,-50%);
-  border-radius:50%;
-  background:radial-gradient(ellipse,rgba(255,194,51,0.18) 0%,transparent 70%);
-  pointer-events:none;
-  opacity:0;
-  transition:opacity 0.8s ease 0.4s;
-  filter:blur(6px);
-}
+@keyframes spark-burst{0%{opacity:1;transform:translate(-50%,-50%) rotate(var(--angle)) translateX(0);}60%{opacity:0.9;}100%{opacity:0;transform:translate(-50%,-50%) rotate(var(--angle)) translateX(var(--dist));}}
+.section-heading .halo{position:absolute;top:50%;left:50%;width:220px;height:60px;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(ellipse,rgba(255,194,51,0.18) 0%,transparent 70%);pointer-events:none;opacity:0;transition:opacity 0.8s ease 0.4s;filter:blur(6px);}
 .section-heading.in-view .halo{opacity:1;}
-
-/* Floating mini drones around heading (deep-bg only) */
-.section-heading .mini-drone{
-  position:absolute;font-size:1rem;opacity:0;pointer-events:none;
-  animation:mini-float 4s ease-in-out infinite;
-  transition:opacity 0.4s ease 0.6s;
-}
+.section-heading .mini-drone{position:absolute;font-size:1rem;opacity:0;pointer-events:none;animation:mini-float 4s ease-in-out infinite;transition:opacity 0.4s ease 0.6s;}
 .section-heading.in-view .mini-drone{opacity:0.7;}
 .section-heading .mini-drone.md1{top:-20px;left:calc(50% - 120px);animation-delay:0s;}
 .section-heading .mini-drone.md2{top:-15px;right:calc(50% - 120px);animation-delay:1.2s;}
 @keyframes mini-float{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
-
-/* Old h2 fallback */
 h2{text-align:center;color:var(--teal);font-size:1.8rem;margin-bottom:2rem;position:relative;}
 h2::after{content:"";display:block;width:50px;height:4px;background:var(--mustard);margin:10px auto 0;border-radius:4px;transform:scaleX(0);transition:transform 0.5s ease 0.2s;}
 .reveal.in-view h2::after{transform:scaleX(1);}
-
-/* section-heading handles its own children's opacity — don't hide the whole block */
 .section-heading.reveal{opacity:1;transform:none;transition:none;}
 .section-heading.reveal.in-view{opacity:1;transform:none;}
-
 .reveal{opacity:0;transform:translateY(30px);transition:opacity 0.7s ease,transform 0.7s ease;}
 .reveal.in-view{opacity:1;transform:translateY(0);}
-
-/* CARDS */
 .services-grid,.pricing-grid,.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.2rem;}
 .card{background:#fff;border-radius:16px;padding:1.5rem;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,0.06);transition:transform 0.25s,box-shadow 0.25s;opacity:0;transform:translateY(24px);}
 .reveal.in-view .card{animation:card-pop 0.6s ease forwards;}
@@ -242,14 +134,9 @@ h2::after{content:"";display:block;width:50px;height:4px;background:var(--mustar
 @keyframes badge-wiggle{0%,100%{transform:translateX(-50%) rotate(0deg);}50%{transform:translateX(-50%) rotate(-4deg);}}
 .price{font-size:1.8rem;font-weight:bold;color:var(--mustard);margin:0.5rem 0;}
 
-/* GALLERY PREMIUM */
+/* ===== GALLERY PREMIUM ===== */
 .gallery-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.4rem;align-items:start;}
-.gallery-grid .video-wrap{
-  position:relative;border-radius:20px;overflow:hidden;aspect-ratio:9/16;
-  opacity:0;transform:translateY(24px);
-  box-shadow:0 0 0 2px rgba(255,194,51,0.5),0 0 0 5px rgba(47,128,196,0.25),0 20px 50px rgba(0,0,0,0.4);
-  transition:box-shadow 0.4s ease,transform 0.4s ease;
-}
+.gallery-grid .video-wrap{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:9/16;opacity:0;transform:translateY(24px);box-shadow:0 0 0 2px rgba(255,194,51,0.5),0 0 0 5px rgba(47,128,196,0.25),0 20px 50px rgba(0,0,0,0.4);transition:box-shadow 0.4s ease,transform 0.4s ease;}
 .gallery-grid .video-wrap:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 0 0 2px rgba(255,122,104,0.8),0 0 0 6px rgba(255,122,104,0.2),0 28px 60px rgba(0,0,0,0.5);}
 .gallery-grid .video-wrap::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 0%,rgba(255,255,255,0.04) 50%,transparent 100%);background-size:100% 8px;pointer-events:none;z-index:3;animation:scanline 4s linear infinite;}
 @keyframes scanline{0%{background-position:0 0;}100%{background-position:0 400px;}}
@@ -258,7 +145,19 @@ h2::after{content:"";display:block;width:50px;height:4px;background:var(--mustar
 .live-badge .dot{width:6px;height:6px;border-radius:50%;background:#fff;animation:live-dot 1.5s ease-in-out infinite;}
 @keyframes live-pulse{0%,100%{box-shadow:0 2px 8px rgba(255,60,60,0.5);}50%{box-shadow:0 2px 16px rgba(255,60,60,0.9);}}
 @keyframes live-dot{0%,100%{opacity:1;}50%{opacity:0;}}
-.gallery-grid .video-card{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:9/16;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;text-align:center;padding:1.5rem 1.2rem;text-decoration:none;color:#fff;opacity:0;transform:translateY(24px);transition:transform 0.3s ease,box-shadow 0.3s ease;box-shadow:0 12px 32px rgba(0,0,0,0.3);background:linear-gradient(145deg,#0d2137,#1a3a5c,#0d2137);}
+
+/* VIDEO CARD — full layout top/mid/bottom */
+.gallery-grid .video-card{
+  position:relative;border-radius:20px;overflow:hidden;aspect-ratio:9/16;
+  display:flex;flex-direction:column;align-items:center;
+  justify-content:space-between; /* spread top mid bottom */
+  text-align:center;padding:1.2rem;
+  text-decoration:none;color:#fff;
+  opacity:0;transform:translateY(24px);
+  transition:transform 0.3s ease,box-shadow 0.3s ease;
+  box-shadow:0 12px 32px rgba(0,0,0,0.3);
+  background:linear-gradient(145deg,#0d2137,#1a3a5c,#0d2137);
+}
 .gallery-grid .video-card::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,0.12) 0%,transparent 50%,rgba(255,255,255,0.04) 100%);z-index:0;pointer-events:none;transition:opacity 0.3s ease;}
 .gallery-grid .video-card:hover::before{opacity:0.5;}
 .gallery-grid .video-card::after{content:"";position:absolute;top:-40%;left:-40%;width:180%;height:180%;background:radial-gradient(ellipse at center,rgba(47,128,196,0.2) 0%,transparent 60%);z-index:0;pointer-events:none;animation:card-glow-rotate 6s ease-in-out infinite alternate;}
@@ -266,27 +165,90 @@ h2::after{content:"";display:block;width:50px;height:4px;background:var(--mustar
 .gallery-grid.reveal.in-view .video-card:nth-child(2){animation-delay:0.1s;}
 .gallery-grid.reveal.in-view .video-card:nth-child(3){animation-delay:0.2s;}
 .gallery-grid.reveal.in-view .video-card:nth-child(4){animation-delay:0.3s;}
+.gallery-grid.reveal.in-view .video-card:nth-child(5){animation-delay:0.35s;}
+.gallery-grid.reveal.in-view .video-card:nth-child(6){animation-delay:0.4s;}
+.gallery-grid.reveal.in-view .video-card:nth-child(7){animation-delay:0.45s;}
+.gallery-grid.reveal.in-view .video-card:nth-child(8){animation-delay:0.5s;}
+.gallery-grid.reveal.in-view .video-card:nth-child(9){animation-delay:0.55s;}
 .gallery-grid .video-card:hover{transform:translateY(-8px) scale(1.03);box-shadow:0 0 0 1.5px rgba(255,194,51,0.6),0 24px 50px rgba(0,0,0,0.45);}
+
+/* thumb art */
 .video-card .thumb-art{position:absolute;inset:0;z-index:0;overflow:hidden;}
 .video-card .thumb-art .horizon{position:absolute;bottom:35%;width:100%;height:1px;background:linear-gradient(90deg,transparent,rgba(174,226,255,0.4),transparent);}
 .video-card .thumb-art .glow-orb{position:absolute;border-radius:50%;filter:blur(30px);}
-.video-card .card-content{position:relative;z-index:2;width:calc(100% + 2.4rem);background:linear-gradient(to top,rgba(0,0,0,0.7) 0%,transparent 100%);padding:1.2rem 0.8rem 0.5rem;border-radius:0 0 12px 12px;margin:-1.5rem -1.2rem;margin-top:auto;}
-.gallery-grid .video-card .play-icon{position:relative;z-index:2;font-size:3rem;margin-bottom:0.6rem;transition:transform 0.3s;filter:drop-shadow(0 4px 12px rgba(255,194,51,0.6));display:block;align-self:center;margin-top:auto;}
-.gallery-grid .video-card:hover .play-icon{transform:scale(1.25);}
-.gallery-grid .video-card .label{font-weight:800;font-size:0.9rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:0.35rem;color:var(--mustard);text-shadow:0 2px 8px rgba(0,0,0,0.5);}
-.gallery-grid .video-card .sub{font-size:0.82rem;opacity:0.9;line-height:1.4;text-shadow:0 1px 4px rgba(0,0,0,0.6);}
-.video-card .view-tag{display:inline-flex;align-items:center;gap:4px;margin-top:0.6rem;font-size:0.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);padding:3px 10px;border-radius:20px;backdrop-filter:blur(4px);transition:background 0.2s;}
-.video-card:hover .view-tag{background:rgba(255,194,51,0.25);}
+
+/* TOP section */
+.video-card .card-top{
+  position:relative;z-index:2;width:100%;
+  display:flex;justify-content:space-between;align-items:flex-start;
+}
+.video-card .card-top .label{
+  font-weight:800;font-size:0.65rem;letter-spacing:2px;text-transform:uppercase;
+  color:var(--mustard);
+  background:rgba(0,0,0,0.4);backdrop-filter:blur(6px);
+  padding:4px 10px;border-radius:20px;
+  border:1px solid rgba(255,194,51,0.35);
+}
+.video-card .card-top .card-num{
+  font-size:0.65rem;font-weight:700;color:rgba(255,255,255,0.5);
+  background:rgba(255,255,255,0.08);padding:3px 8px;border-radius:10px;
+}
+
+/* MIDDLE section — play + pill */
+.video-card .card-mid{
+  position:relative;z-index:2;
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+}
+.gallery-grid .video-card .play-icon{
+  font-size:3.5rem;
+  transition:transform 0.3s;
+  display:block;
+  animation:play-ring 2.8s ease-in-out infinite;
+}
+@keyframes play-ring{
+  0%,100%{filter:drop-shadow(0 4px 20px rgba(255,194,51,0.6));}
+  50%{filter:drop-shadow(0 4px 32px rgba(255,122,104,1));}
+}
+.gallery-grid .video-card:hover .play-icon{transform:scale(1.3);}
+.video-card .duration-pill{
+  font-size:0.7rem;font-weight:700;
+  background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.25);
+  padding:4px 12px;border-radius:20px;backdrop-filter:blur(6px);
+  color:rgba(255,255,255,0.9);letter-spacing:0.5px;
+}
+
+/* BOTTOM section */
+.video-card .card-content{
+  position:relative;z-index:2;width:calc(100% + 2.4rem);
+  background:linear-gradient(to top,rgba(0,0,0,0.8) 0%,transparent 100%);
+  padding:1.2rem 0.8rem 0.5rem;
+  border-radius:0 0 12px 12px;
+  margin:0 -1.2rem -1.2rem;
+}
+.gallery-grid .video-card .sub{font-size:0.85rem;opacity:0.95;line-height:1.4;text-shadow:0 1px 6px rgba(0,0,0,0.8);font-weight:600;}
+.video-card .view-tag{display:inline-flex;align-items:center;gap:4px;margin-top:0.5rem;font-size:0.68rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);padding:4px 12px;border-radius:20px;backdrop-filter:blur(4px);transition:background 0.25s,border-color 0.25s;}
+.video-card:hover .view-tag{background:rgba(255,194,51,0.3);border-color:rgba(255,194,51,0.5);}
+
 .reveal.in-view .video-wrap,.reveal.in-view .video-card{animation:card-pop 0.6s ease forwards;}
-
-/* FOOTER */
-footer{background:var(--teal);color:#fff;text-align:center;padding:2.5rem 1.5rem;position:relative;overflow:hidden;}
-footer h3{margin-bottom:0.5rem;}
-footer p{margin-bottom:1.2rem;}
-footer .cta-btn{background:var(--mustard);color:var(--text-dark);}
-footer .cta-btn:hover{transform:translateY(-3px) scale(1.05);}
-
-/* AMBIENT */
+footer{background:linear-gradient(160deg,#0a1e33 0%,#0d2a45 50%,#0a1e33 100%);color:#fff;text-align:center;padding:4rem 1.5rem 2.5rem;position:relative;overflow:hidden;}
+footer::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 20% 50%,rgba(47,128,196,0.18) 0%,transparent 60%),radial-gradient(ellipse 60% 80% at 80% 30%,rgba(255,122,104,0.12) 0%,transparent 60%),radial-gradient(ellipse 50% 50% at 50% 100%,rgba(255,194,51,0.1) 0%,transparent 60%);animation:aurora-shift 8s ease-in-out infinite alternate;pointer-events:none;}
+@keyframes aurora-shift{0%{opacity:0.7;transform:scale(1);}100%{opacity:1;transform:scale(1.05);}}
+footer::after{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:80%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,194,51,0.6),rgba(255,122,104,0.4),rgba(255,194,51,0.6),transparent);}
+footer .footer-inner{position:relative;z-index:1;}
+.footer-brand{margin-bottom:2rem;}
+.footer-brand .logo-text{font-size:1.6rem;font-weight:800;letter-spacing:2px;background:linear-gradient(135deg,#fff 0%,var(--mustard) 50%,#fff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200%;animation:shimmer-text 3s ease-in-out infinite;}
+@keyframes shimmer-text{0%{background-position:0%;}50%{background-position:100%;}100%{background-position:0%;}}
+.footer-brand .tagline{font-size:0.75rem;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:4px;}
+.footer-dots{display:flex;justify-content:center;align-items:center;gap:8px;margin:1.5rem 0;}
+.footer-dots span{width:5px;height:5px;border-radius:50%;background:var(--mustard);opacity:0.5;}
+.footer-dots span:nth-child(2){width:28px;height:3px;border-radius:4px;opacity:0.8;}
+.footer-contact-title{font-size:0.7rem;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:1rem;}
+.footer-contact-items{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-bottom:1.8rem;}
+.footer-contact-items a,.footer-contact-items span{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);padding:10px 20px;border-radius:30px;color:#fff;text-decoration:none;font-size:0.9rem;font-weight:600;backdrop-filter:blur(8px);transition:background 0.25s,border-color 0.25s,transform 0.2s;}
+.footer-contact-items a:hover{background:rgba(255,194,51,0.15);border-color:rgba(255,194,51,0.4);transform:translateY(-2px);}
+footer .cta-btn{background:linear-gradient(135deg,var(--coral),#ff5a44);color:#fff;box-shadow:0 8px 24px rgba(255,122,104,0.4);border:1px solid rgba(255,255,255,0.15);font-size:1rem;padding:1rem 2.5rem;opacity:1;animation:pulse-glow 2.4s ease-in-out infinite;}
+footer .cta-btn:hover{transform:translateY(-3px) scale(1.05);box-shadow:0 12px 32px rgba(255,122,104,0.55);}
+.footer-copy{margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.07);font-size:0.7rem;color:rgba(255,255,255,0.25);letter-spacing:1px;}
 .bg-floaters{position:fixed;top:0;left:0;width:100%;height:100%;overflow:hidden;z-index:1;pointer-events:none;}
 .bg-floaters span{position:absolute;opacity:0.35;filter:drop-shadow(0 4px 6px rgba(0,0,0,0.08));animation:bg-drift-up linear infinite;}
 @keyframes bg-drift-up{0%{transform:translateY(110vh) translateX(0) rotate(0deg);}50%{transform:translateY(50vh) translateX(20px) rotate(10deg);}100%{transform:translateY(-10vh) translateX(-15px) rotate(-6deg);}}
@@ -299,65 +261,20 @@ footer .cta-btn:hover{transform:translateY(-3px) scale(1.05);}
 .bg-floaters .b7{left:88%;font-size:1.5rem;animation-duration:32s;animation-delay:5s;}
 .bg-floaters .b8{left:40%;font-size:1rem;animation-duration:24s;animation-delay:16s;}
 header.hero,section,footer{position:relative;z-index:2;}
-
 #toTop{position:fixed;bottom:20px;right:20px;background:var(--coral);color:#fff;width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem;box-shadow:0 4px 12px rgba(0,0,0,0.25);text-decoration:none;opacity:0;transform:translateY(20px);transition:opacity 0.3s,transform 0.3s;z-index:60;}
 #toTop.show{opacity:1;transform:translateY(0);}
 #toTop:hover{transform:translateY(-4px) scale(1.08);}
 @media(max-width:600px){.floaty{font-size:1.3rem;}}
-
-  .hero-stats{
-  display:flex;
-  justify-content:center;
-  gap:20px;
-  flex-wrap:wrap;
-  margin-top:25px;
-}
-.hero-stats{
-    display:flex;
-    justify-content:center;
-    gap:8px;
-    margin-top:18px;
-}
-.stat-item{
-    padding:8px 12px;
-    border-radius:12px;
-    background:rgba(255,255,255,.12);
-    backdrop-filter:blur(8px);
-    min-width:80px;
-}
-.stat-item strong{
-    font-size:1rem;
-}
-.stat-item span{
-    font-size:.65rem;
-}
-/* ===== AUDIO TOGGLE ===== */
-#audioToggle{
-  position:fixed;top:380px;right:16px;z-index:9998;
-  width:46px;height:46px;border-radius:50%;border:none;cursor:pointer;
-  background:rgba(255,255,255,0.85);backdrop-filter:blur(12px);
-  -webkit-backdrop-filter:blur(12px);
-  box-shadow:0 4px 16px rgba(0,0,0,0.15);
-  font-size:1.3rem;display:flex;align-items:center;justify-content:center;
-  transition:transform 0.2s,box-shadow 0.2s,background 0.2s;
-  animation:fade-up 1s ease-out 1.2s both;
-}
+#audioToggle{position:fixed;top:380px;right:16px;z-index:9998;width:46px;height:46px;border-radius:50%;border:none;cursor:pointer;background:rgba(255,255,255,0.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 4px 16px rgba(0,0,0,0.15);font-size:1.3rem;display:flex;align-items:center;justify-content:center;transition:transform 0.2s,box-shadow 0.2s,background 0.2s;animation:fade-up 1s ease-out 1.2s both;}
 #audioToggle:hover{transform:scale(1.1);box-shadow:0 6px 20px rgba(0,0,0,0.22);}
 #audioToggle.playing{background:var(--coral);color:#fff;animation:none;}
 #audioToggle .btn-icon{pointer-events:none;line-height:1;}
-
-/* ===== SOUNDWAVE VISUALIZER ===== */
-#soundwave{
-  position:fixed;bottom:0;left:0;width:100%;height:56px;
-  pointer-events:none;z-index:9997;
-  opacity:0;transition:opacity 0.6s ease;
-}
+#soundwave{position:fixed;bottom:0;left:0;width:100%;height:56px;pointer-events:none;z-index:9997;opacity:0;transition:opacity 0.6s ease;}
 #soundwave.visible{opacity:1;}
 #soundwave canvas{display:block;width:100%;height:56px;}
 </style>
 </head>
 <body>
-
 <nav class="brandbar" id="navbar">
   <span class="drone-icon">🚁</span>
   <div class="brand-text">
@@ -365,30 +282,17 @@ header.hero,section,footer{position:relative;z-index:2;}
     <div class="th">มุมสูงโปรดักชั่น</div>
   </div>
 </nav>
-
-<!-- Audio toggle button -->
-<button id="audioToggle" aria-label="เปิด/ปิดเสียง" title="เปิด/ปิดเสียงธรรมชาติ">
-  <span class="btn-icon">🔇</span>
-</button>
-
-<!-- Soundwave canvas -->
+<button id="audioToggle" aria-label="เปิด/ปิดเสียง" title="เปิด/ปิดเสียงธรรมชาติ"><span class="btn-icon">🔇</span></button>
 <div id="soundwave"><canvas id="waveCanvas"></canvas></div>
-
 <div class="bg-floaters" aria-hidden="true">
   <span class="b1">🌙</span><span class="b2">🎈</span><span class="b3">🪂</span>
   <span class="b4">🕊️</span><span class="b5">🚀</span><span class="b6">🪐</span>
   <span class="b7">🪁</span><span class="b8">⭐</span>
 </div>
-
 <header class="hero">
-  <div class="cloud-shape c1"></div>
-  <div class="cloud-shape c2"></div>
-  <div class="cloud-shape c3"></div>
-  <span class="floaty f1">🚁</span>
-  <span class="floaty f2">☀️</span>
-  <span class="floaty f3">🦅</span>
-  <span class="floaty f4">🛸</span>
-  <span class="floaty f5">🪂</span>
+  <div class="cloud-shape c1"></div><div class="cloud-shape c2"></div><div class="cloud-shape c3"></div>
+  <span class="floaty f1">🚁</span><span class="floaty f2">☀️</span>
+  <span class="floaty f3">🦅</span><span class="floaty f4">🛸</span><span class="floaty f5">🪂</span>
   <div class="overlay">
     <div class="hero-brand">
       <div class="en">MUM <span>SOONG</span><span class="s2"> Production</span></div>
@@ -396,43 +300,22 @@ header.hero,section,footer{position:relative;z-index:2;}
     </div>
     <p>บริการถ่ายภาพและวิดีโอมุมสูง Cinematic Footage FPV</p>
     <a href="#contact" class="cta-btn">ขอใบเสนอราคา</a>
-        <div class="hero-stats">
-    <div class="stat-item">
-        <strong>100+</strong>
-        <span>Projects</span>
+    <div class="hero-stats">
+      <div class="stat-item"><strong>100+</strong><span>Projects</span></div>
+      <div class="stat-item"><strong>500+</strong><span>Flight Hours</span></div>
+      <div class="stat-item"><strong>4K</strong><span>Cinematic</span></div>
     </div>
-    <div class="stat-item">
-        <strong>500+</strong>
-        <span>Flight Hours</span>
-    </div>
-    <div class="stat-item">
-        <strong>4K</strong>
-        <span>Cinematic</span>
-    </div>
-</div>
-</div>
   </div>
 </header>
-
-<!-- wave hero→services -->
 <div style="background:linear-gradient(180deg,#aee2ff,#2f80c4);line-height:0;">
-  <svg viewBox="0 0 1200 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
-    <path d="M0,0 C300,60 900,0 1200,50 L1200,60 L0,60 Z" fill="#e8f6ff"/>
-  </svg>
+  <svg viewBox="0 0 1200 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block;width:100%;height:60px;"><path d="M0,0 C300,60 900,0 1200,50 L1200,60 L0,60 Z" fill="#e8f6ff"/></svg>
 </div>
-
-<!-- SERVICES -->
 <div class="section-wrap sky-bg">
   <div class="bokeh" id="bokeh-services"></div>
   <section id="services">
     <div class="section-heading reveal">
-      <div class="halo"></div>
-      <span class="mini-drone md1">🚁</span>
-      <span class="mini-drone md2">🚁</span>
-      <div class="sparks">
-        <div class="spark"></div><div class="spark"></div><div class="spark"></div><div class="spark"></div>
-        <div class="spark"></div><div class="spark"></div><div class="spark"></div><div class="spark"></div>
-      </div>
+      <div class="halo"></div><span class="mini-drone md1">🚁</span><span class="mini-drone md2">🚁</span>
+      <div class="sparks"><div class="spark"></div><div class="spark"></div><div class="spark"></div><div class="spark"></div><div class="spark"></div><div class="spark"></div><div class="spark"></div><div class="spark"></div></div>
       <div class="eyebrow">🚁 What We Do</div>
       <h2>บริการของเรา <span class="drone-orbit">🪂</span></h2>
       <div class="bar-wrap"><div class="bar b1"></div><div class="bar b2"></div><div class="bar b3"></div></div>
@@ -445,22 +328,13 @@ header.hero,section,footer{position:relative;z-index:2;}
       <div class="card"><div class="icon">🗺️</div><h3>ทำแผนที่/สำรวจที่ดิน</h3><p>ภาพถ่ายมุมสูงและแผนที่ 2D/3D เพื่อการวางแผน</p></div>
     </div>
   </section>
-  <svg viewBox="0 0 1200 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
-    <path d="M0,60 C400,0 800,60 1200,20 L1200,0 L0,0 Z" fill="#fff"/>
-  </svg>
+  <svg viewBox="0 0 1200 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block;width:100%;height:60px;"><path d="M0,60 C400,0 800,60 1200,20 L1200,0 L0,0 Z" fill="#fff"/></svg>
 </div>
-
-<!-- PRICING -->
 <div class="section-wrap white-bg">
   <section id="pricing">
     <div class="section-heading reveal">
-      <div class="halo"></div>
-      <span class="mini-drone md1">💎</span>
-      <span class="mini-drone md2">💎</span>
-      <div class="sparks">
-        <div class="spark"></div><div class="spark"></div><div class="spark"></div><div class="spark"></div>
-        <div class="spark"></div><div class="spark"></div><div class="spark"></div><div class="spark"></div>
-      </div>
+      <div class="halo"></div><span class="mini-drone md1">💎</span><span class="mini-drone md2">💎</span>
+      <div class="sparks"><div class="spark"></div><div class="spark"></div><div class="spark"></div><div class="spark"></div><div class="spark"></div><div class="spark"></div><div class="spark"></div><div class="spark"></div></div>
       <div class="eyebrow">💎 Packages</div>
       <h2>แพ็กเกจบริการ <span class="drone-orbit">💰</span></h2>
       <div class="bar-wrap"><div class="bar b1"></div><div class="bar b2"></div><div class="bar b3"></div></div>
@@ -471,29 +345,14 @@ header.hero,section,footer{position:relative;z-index:2;}
       <div class="card"><h3>พรีเมียม</h3><div class="price">8,000 ฿</div><p>ภาพถ่าย + วิดีโอ 4K วิดีโอซีนีมาติกพร้อมเพลงประกอบ ตัดต่อเต็มรูปแบบ</p><p>(ส่งแก้ได้ 3 รอบ)</p><p>Work for 8 hours.</p></div>
     </div>
   </section>
-  <svg viewBox="0 0 1200 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
-    <path d="M0,0 C300,60 900,0 1200,40 L1200,60 L0,60 Z" fill="#1a3a5c"/>
-  </svg>
+  <svg viewBox="0 0 1200 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block;width:100%;height:60px;"><path d="M0,0 C300,60 900,0 1200,40 L1200,60 L0,60 Z" fill="#1a3a5c"/></svg>
 </div>
-
-<!-- GALLERY -->
 <div class="section-wrap deep-bg">
   <div class="bokeh" id="bokeh-gallery"></div>
   <section id="gallery">
     <div class="section-heading reveal">
-      <div class="halo"></div>
-      <span class="mini-drone md1">🎬</span>
-      <span class="mini-drone md2">🎬</span>
-      <div class="sparks">
-        <div class="spark" style="background:var(--mustard);"></div>
-        <div class="spark" style="background:var(--mustard);"></div>
-        <div class="spark" style="background:var(--mustard);"></div>
-        <div class="spark" style="background:var(--mustard);"></div>
-        <div class="spark" style="background:var(--mustard);"></div>
-        <div class="spark" style="background:var(--mustard);"></div>
-        <div class="spark" style="background:var(--mustard);"></div>
-        <div class="spark" style="background:var(--mustard);"></div>
-      </div>
+      <div class="halo"></div><span class="mini-drone md1">🎬</span><span class="mini-drone md2">🎬</span>
+      <div class="sparks"><div class="spark" style="background:var(--mustard);"></div><div class="spark" style="background:var(--mustard);"></div><div class="spark" style="background:var(--mustard);"></div><div class="spark" style="background:var(--mustard);"></div><div class="spark" style="background:var(--mustard);"></div><div class="spark" style="background:var(--mustard);"></div><div class="spark" style="background:var(--mustard);"></div><div class="spark" style="background:var(--mustard);"></div></div>
       <div class="eyebrow" style="color:var(--mustard);">🎬 Recent Work</div>
       <h2 style="color:#fff;">ผลงานล่าสุด <span class="drone-orbit">🎥</span></h2>
       <div class="bar-wrap"><div class="bar b1"></div><div class="bar b2"></div><div class="bar b3"></div></div>
@@ -504,282 +363,101 @@ header.hero,section,footer{position:relative;z-index:2;}
         <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F780253781721651%2F&show_text=false&width=267&t=0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
       <a class="video-card" href="https://www.facebook.com/reel/1672670740616866" target="_blank" rel="noopener">
-        <div class="thumb-art">
-          <div class="glow-orb" style="width:120px;height:120px;top:10%;left:20%;background:rgba(255,100,80,0.3);"></div>
-          <div class="glow-orb" style="width:80px;height:80px;bottom:30%;right:15%;background:rgba(47,128,196,0.3);"></div>
-          <div class="horizon"></div>
-        </div>
-        <span class="play-icon">▶️</span>
-        <div class="card-content">
-          <div class="label">HIGHLIGHTS</div>
-          <div class="sub">💦 MaeSotWaterFight 2026 🔥</div>
-          <div class="view-tag">ดูคลิป →</div>
-        </div>
+        <div class="thumb-art"><div class="glow-orb" style="width:160px;height:160px;top:5%;left:10%;background:rgba(255,100,80,0.35);"></div><div class="glow-orb" style="width:100px;height:100px;bottom:25%;right:10%;background:rgba(47,128,196,0.35);"></div><div class="horizon"></div></div>
+        <div class="card-top"><span class="label">HIGHLIGHTS</span><span class="card-num">#01</span></div>
+        <div class="card-mid"><span class="play-icon">▶️</span><span class="duration-pill">💦 Water Fight</span></div>
+        <div class="card-content"><div class="sub">MaeSotWaterFight 2026 🔥</div><div class="view-tag">ดูคลิป →</div></div>
       </a>
       <a class="video-card" href="https://www.facebook.com/reel/978228678286875" target="_blank" rel="noopener">
-        <div class="thumb-art">
-          <div class="glow-orb" style="width:100px;height:100px;top:15%;right:20%;background:rgba(174,226,255,0.25);"></div>
-          <div class="glow-orb" style="width:60px;height:60px;bottom:25%;left:10%;background:rgba(255,194,51,0.2);"></div>
-          <div class="horizon"></div>
-        </div>
-        <span class="play-icon">▶️</span>
-        <div class="card-content">
-          <div class="label">HIGHLIGHTS</div>
-          <div class="sub">rainy season! ☔💙</div>
-          <div class="view-tag">ดูคลิป →</div>
-        </div>
+        <div class="thumb-art"><div class="glow-orb" style="width:140px;height:140px;top:8%;right:10%;background:rgba(174,226,255,0.3);"></div><div class="glow-orb" style="width:80px;height:80px;bottom:20%;left:5%;background:rgba(255,194,51,0.25);"></div><div class="horizon"></div></div>
+        <div class="card-top"><span class="label">HIGHLIGHTS</span><span class="card-num">#02</span></div>
+        <div class="card-mid"><span class="play-icon">▶️</span><span class="duration-pill">☔ Rainy Season</span></div>
+        <div class="card-content"><div class="sub">rainy season! ☔💙</div><div class="view-tag">ดูคลิป →</div></div>
       </a>
       <a class="video-card" href="https://www.facebook.com/reel/1789515795756219" target="_blank" rel="noopener">
-        <div class="thumb-art">
-          <div class="glow-orb" style="width:90px;height:90px;top:20%;left:15%;background:rgba(100,200,100,0.2);"></div>
-          <div class="glow-orb" style="width:70px;height:70px;bottom:20%;right:20%;background:rgba(255,122,104,0.25);"></div>
-          <div class="horizon"></div>
-        </div>
-        <span class="play-icon">▶️</span>
-        <div class="card-content">
-          <div class="label">HIGHLIGHTS</div>
-          <div class="sub">บ.แม่ปิงพนากิจ-ทางหลวง3114🛣️</div>
-          <div class="view-tag">ดูคลิป →</div>
-        </div>
+        <div class="thumb-art"><div class="glow-orb" style="width:120px;height:120px;top:10%;left:15%;background:rgba(100,220,100,0.25);"></div><div class="glow-orb" style="width:90px;height:90px;bottom:22%;right:15%;background:rgba(255,122,104,0.3);"></div><div class="horizon"></div></div>
+        <div class="card-top"><span class="label">AERIAL</span><span class="card-num">#03</span></div>
+        <div class="card-mid"><span class="play-icon">▶️</span><span class="duration-pill">🛣️ Highway</span></div>
+        <div class="card-content"><div class="sub">บ.แม่ปิงพนากิจ-ทางหลวง3114🛣️</div><div class="view-tag">ดูคลิป →</div></div>
       </a>
-       <a class="video-card" href="https://www.facebook.com/reel/1660658905163110" target="_blank" rel="noopener">
-        <div class="thumb-art">
-          <div class="glow-orb" style="width:90px;height:90px;top:20%;left:15%;background:rgba(100,200,100,0.2);"></div>
-          <div class="glow-orb" style="width:70px;height:70px;bottom:20%;right:20%;background:rgba(255,122,104,0.25);"></div>
-          <div class="horizon"></div>
-        </div>
-        <span class="play-icon">▶️</span>
-        <div class="card-content">
-          <div class="label">HIGHLIGHTS</div>
-          <div class="sub">รดน้ำดำหัวผู้ใหญ่สืบสานประเพณีไทย ๒๕๖๙ บจก.แม่ปิงพนากิจ 🔫</div>
-          <div class="view-tag">ดูคลิป →</div>
-        </div>
+      <a class="video-card" href="https://www.facebook.com/reel/1660658905163110" target="_blank" rel="noopener">
+        <div class="thumb-art"><div class="glow-orb" style="width:130px;height:130px;top:12%;right:12%;background:rgba(255,194,51,0.25);"></div><div class="glow-orb" style="width:80px;height:80px;bottom:18%;left:8%;background:rgba(47,128,196,0.3);"></div><div class="horizon"></div></div>
+        <div class="card-top"><span class="label">EVENT</span><span class="card-num">#04</span></div>
+        <div class="card-mid"><span class="play-icon">▶️</span><span class="duration-pill">🙏 ประเพณี</span></div>
+        <div class="card-content"><div class="sub">รดน้ำดำหัวสืบสานประเพณีไทย ๒๕๖๙ 🔫</div><div class="view-tag">ดูคลิป →</div></div>
       </a>
-       <a class="video-card" href="https://www.facebook.com/reel/1305532238181304" target="_blank" rel="noopener">
-        <div class="thumb-art">
-          <div class="glow-orb" style="width:90px;height:90px;top:20%;left:15%;background:rgba(100,200,100,0.2);"></div>
-          <div class="glow-orb" style="width:70px;height:70px;bottom:20%;right:20%;background:rgba(255,122,104,0.25);"></div>
-          <div class="horizon"></div>
-        </div>
-        <span class="play-icon">▶️</span>
-        <div class="card-content">
-          <div class="label">HIGHLIGHTS</div>
-          <div class="sub">น่านฟ้าแม่กาษาวัดศรีพรเพ็ญมาตยาราม 👹</div>
-          <div class="view-tag">ดูคลิป →</div>
-        </div>
+      <a class="video-card" href="https://www.facebook.com/reel/1305532238181304" target="_blank" rel="noopener">
+        <div class="thumb-art"><div class="glow-orb" style="width:150px;height:150px;top:5%;left:5%;background:rgba(255,100,80,0.2);"></div><div class="glow-orb" style="width:70px;height:70px;bottom:30%;right:10%;background:rgba(174,226,255,0.3);"></div><div class="horizon"></div></div>
+        <div class="card-top"><span class="label">AERIAL</span><span class="card-num">#05</span></div>
+        <div class="card-mid"><span class="play-icon">▶️</span><span class="duration-pill">👹 วัดศรีพรเพ็ญ</span></div>
+        <div class="card-content"><div class="sub">น่านฟ้าแม่กาษาวัดศรีพรเพ็ญมาตยาราม 👹</div><div class="view-tag">ดูคลิป →</div></div>
       </a>
-       <a class="video-card" href="https://www.facebook.com/reel/1865320887521017" target="_blank" rel="noopener">
-        <div class="thumb-art">
-          <div class="glow-orb" style="width:90px;height:90px;top:20%;left:15%;background:rgba(100,200,100,0.2);"></div>
-          <div class="glow-orb" style="width:70px;height:70px;bottom:20%;right:20%;background:rgba(255,122,104,0.25);"></div>
-          <div class="horizon"></div>
-        </div>
-        <span class="play-icon">▶️</span>
-        <div class="card-content">
-          <div class="label">HIGHLIGHTS</div>
-          <div class="sub">แม่ตะลอตีนธาตุ🌞</div>
-          <div class="view-tag">ดูคลิป →</div>
-        </div>
+      <a class="video-card" href="https://www.facebook.com/reel/1865320887521017" target="_blank" rel="noopener">
+        <div class="thumb-art"><div class="glow-orb" style="width:110px;height:110px;top:15%;right:5%;background:rgba(255,200,50,0.3);"></div><div class="glow-orb" style="width:90px;height:90px;bottom:20%;left:12%;background:rgba(100,200,100,0.2);"></div><div class="horizon"></div></div>
+        <div class="card-top"><span class="label">CINEMATIC</span><span class="card-num">#06</span></div>
+        <div class="card-mid"><span class="play-icon">▶️</span><span class="duration-pill">🌞 แม่ตะลอ</span></div>
+        <div class="card-content"><div class="sub">แม่ตะลอตีนธาตุ🌞</div><div class="view-tag">ดูคลิป →</div></div>
       </a>
       <a class="video-card" href="https://www.facebook.com/reel/2294617764350910" target="_blank" rel="noopener">
-        <div class="thumb-art">
-          <div class="glow-orb" style="width:90px;height:90px;top:20%;left:15%;background:rgba(100,200,100,0.2);"></div>
-          <div class="glow-orb" style="width:70px;height:70px;bottom:20%;right:20%;background:rgba(255,122,104,0.25);"></div>
-          <div class="horizon"></div>
-        </div>
-        <span class="play-icon">▶️</span>
-        <div class="card-content">
-          <div class="label">HIGHLIGHTS</div>
-          <div class="sub">เชียงคาน🌅</div>
-          <div class="view-tag">ดูคลิป →</div>
-        </div>
+        <div class="thumb-art"><div class="glow-orb" style="width:140px;height:140px;top:8%;left:8%;background:rgba(255,122,104,0.25);"></div><div class="glow-orb" style="width:80px;height:80px;bottom:15%;right:8%;background:rgba(47,128,196,0.35);"></div><div class="horizon"></div></div>
+        <div class="card-top"><span class="label">TRAVEL</span><span class="card-num">#07</span></div>
+        <div class="card-mid"><span class="play-icon">▶️</span><span class="duration-pill">🌅 เชียงคาน</span></div>
+        <div class="card-content"><div class="sub">เชียงคาน🌅</div><div class="view-tag">ดูคลิป →</div></div>
       </a>
       <a class="video-card" href="https://www.facebook.com/reel/818801451151204" target="_blank" rel="noopener">
-        <div class="thumb-art">
-          <div class="glow-orb" style="width:90px;height:90px;top:20%;left:15%;background:rgba(100,200,100,0.2);"></div>
-          <div class="glow-orb" style="width:70px;height:70px;bottom:20%;right:20%;background:rgba(255,122,104,0.25);"></div>
-          <div class="horizon"></div>
-        </div>
-        <span class="play-icon">▶️</span>
-        <div class="card-content">
-          <div class="label">HIGHLIGHTS</div>
-          <div class="sub">Action🏍️</div>
-          <div class="view-tag">ดูคลิป →</div>
-        </div>
+        <div class="thumb-art"><div class="glow-orb" style="width:120px;height:120px;top:10%;right:10%;background:rgba(255,80,80,0.3);"></div><div class="glow-orb" style="width:100px;height:100px;bottom:18%;left:5%;background:rgba(255,194,51,0.2);"></div><div class="horizon"></div></div>
+        <div class="card-top"><span class="label">ACTION</span><span class="card-num">#08</span></div>
+        <div class="card-mid"><span class="play-icon">▶️</span><span class="duration-pill">🏍️ FPV Action</span></div>
+        <div class="card-content"><div class="sub">Action🏍️</div><div class="view-tag">ดูคลิป →</div></div>
       </a>
     </div>
   </section>
-  <svg viewBox="0 0 1200 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
-    <path d="M0,20 C400,60 800,0 1200,40 L1200,60 L0,60 Z" fill="#2f80c4"/>
-  </svg>
+  <svg viewBox="0 0 1200 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block;width:100%;height:60px;"><path d="M0,20 C400,60 800,0 1200,40 L1200,60 L0,60 Z" fill="#2f80c4"/></svg>
 </div>
-
 <footer id="contact" class="reveal">
-  <h3>MUM SOONG Production</h3>
-  <p style="opacity:0.85;font-size:0.85rem;margin-bottom:1rem;">มุมสูงโปรดักชั่น</p>
-  <h3 style="margin-top:1.5rem;">ติดต่อขอใบเสนอราคา</h3>
-  <p>📞 095-129-2989 &nbsp;|&nbsp; 💬 Line: ncorbossy</p>
-  <a href="tel:0951292989" class="cta-btn">โทรเลย</a>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo-text">✦ MUM SOONG Production ✦</div>
+      <div class="tagline">มุมสูงโปรดักชั่น · Cinematic Drone Services</div>
+    </div>
+    <div class="footer-dots">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="footer-contact-title">ติดต่อขอใบเสนอราคา</div>
+    <div class="footer-contact-items">
+      <a href="tel:0951292989">📞 095-129-2989</a>
+      <span>💬 Line: ncorbossy</span>
+    </div>
+    <a href="tel:0951292989" class="cta-btn">📲 โทรเลย</a>
+    <div class="footer-copy">© 2026 Mum Soong Production · All Rights Reserved</div>
+  </div>
 </footer>
-
 <a href="#top" id="toTop" aria-label="กลับไปด้านบน">↑</a>
-
 <script>
-  /* ===== BOKEH ===== */
-  function makeBokeh(id,colors,count){
-    const el=document.getElementById(id);if(!el)return;
-    for(let i=0;i<count;i++){
-      const s=document.createElement('span');
-      const size=6+Math.random()*20;
-      s.style.cssText=`width:${size}px;height:${size}px;left:${Math.random()*100}%;bottom:${Math.random()*20}%;background:${colors[Math.floor(Math.random()*colors.length)]};animation-duration:${8+Math.random()*12}s;animation-delay:${Math.random()*10}s;`;
-      el.appendChild(s);
-    }
-  }
+  function makeBokeh(id,colors,count){const el=document.getElementById(id);if(!el)return;for(let i=0;i<count;i++){const s=document.createElement('span');const size=6+Math.random()*20;s.style.cssText=`width:${size}px;height:${size}px;left:${Math.random()*100}%;bottom:${Math.random()*20}%;background:${colors[Math.floor(Math.random()*colors.length)]};animation-duration:${8+Math.random()*12}s;animation-delay:${Math.random()*10}s;`;el.appendChild(s);}}
   makeBokeh('bokeh-services',['rgba(47,128,196,0.25)','rgba(255,194,51,0.2)','rgba(174,226,255,0.3)'],18);
   makeBokeh('bokeh-gallery',['rgba(255,255,255,0.15)','rgba(255,194,51,0.15)','rgba(174,226,255,0.1)'],22);
-
-  /* ===== SCROLL REVEAL ===== */
   const revealEls=document.querySelectorAll('.reveal');
-  const observer=new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in-view');});
-  },{threshold:0.12});
+  const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in-view');});},{threshold:0.12});
   revealEls.forEach(el=>observer.observe(el));
-
-  /* ===== NAVBAR + BACK TO TOP ===== */
   const navbar=document.getElementById('navbar');
   const toTop=document.getElementById('toTop');
-  window.addEventListener('scroll',()=>{
-    navbar.classList.toggle('scrolled',window.scrollY>20);
-    toTop.classList.toggle('show',window.scrollY>400);
-  });
-
-  /* ===== AUDIO + SOUNDWAVE VISUALIZER ===== */
-  // Free nature sound (CC0) — rain + forest ambience from Pixabay CDN
-  const AUDIO_SRC = 'https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3';
-
-  let audio = null;
-  let audioCtx = null;
-  let analyser = null;
-  let source = null;
-  let rafId = null;
-  let isPlaying = false;
-
-  const btn = document.getElementById('audioToggle');
-  const btnIcon = btn.querySelector('.btn-icon');
-  const waveEl = document.getElementById('soundwave');
-  const canvas = document.getElementById('waveCanvas');
-  const ctx2d = canvas.getContext('2d');
-
-  function initAudio(){
-    if(audio) return;
-    audio = new Audio();
-    audio.src = AUDIO_SRC;
-    audio.loop = true;
-    audio.crossOrigin = 'anonymous';
-    audio.volume = 0.35;
-
-    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-    analyser = audioCtx.createAnalyser();
-    analyser.fftSize = 256;
-    source = audioCtx.createMediaElementSource(audio);
-    source.connect(analyser);
-    analyser.connect(audioCtx.destination);
-  }
-
-  function resizeCanvas(){
-    canvas.width = window.innerWidth;
-    canvas.height = 56;
-  }
-  resizeCanvas();
-  window.addEventListener('resize', resizeCanvas);
-
-  function drawWave(){
-    rafId = requestAnimationFrame(drawWave);
-    const bufLen = analyser.frequencyBinCount;
-    const dataArr = new Uint8Array(bufLen);
-    analyser.getByteTimeDomainData(dataArr);
-
-    ctx2d.clearRect(0, 0, canvas.width, canvas.height);
-
-    // gradient line
-    const grad = ctx2d.createLinearGradient(0,0,canvas.width,0);
-    grad.addColorStop(0,'rgba(174,226,255,0)');
-    grad.addColorStop(0.2,'rgba(255,194,51,0.7)');
-    grad.addColorStop(0.5,'rgba(255,122,104,0.9)');
-    grad.addColorStop(0.8,'rgba(47,128,196,0.7)');
-    grad.addColorStop(1,'rgba(174,226,255,0)');
-
-    ctx2d.lineWidth = 2.5;
-    ctx2d.strokeStyle = grad;
-    ctx2d.shadowBlur = 8;
-    ctx2d.shadowColor = 'rgba(255,194,51,0.5)';
-    ctx2d.beginPath();
-
-    const sliceW = canvas.width / bufLen;
-    let x = 0;
-    for(let i=0;i<bufLen;i++){
-      const v = dataArr[i]/128.0;
-      const y = (v * canvas.height/2);
-      i===0 ? ctx2d.moveTo(x,y) : ctx2d.lineTo(x,y);
-      x += sliceW;
-    }
-    ctx2d.lineTo(canvas.width, canvas.height/2);
-    ctx2d.stroke();
-  }
-
-  // Fake idle wave when paused (gives life even when silent)
-  let idleT = 0;
-  function drawIdleWave(){
-    rafId = requestAnimationFrame(drawIdleWave);
-    idleT += 0.04;
-    ctx2d.clearRect(0,0,canvas.width,canvas.height);
-    const grad = ctx2d.createLinearGradient(0,0,canvas.width,0);
-    grad.addColorStop(0,'rgba(174,226,255,0)');
-    grad.addColorStop(0.5,'rgba(47,128,196,0.35)');
-    grad.addColorStop(1,'rgba(174,226,255,0)');
-    ctx2d.lineWidth = 2;
-    ctx2d.strokeStyle = grad;
-    ctx2d.shadowBlur = 4;
-    ctx2d.shadowColor = 'rgba(47,128,196,0.3)';
-    ctx2d.beginPath();
-    for(let x=0;x<=canvas.width;x+=2){
-      const y = canvas.height/2 + Math.sin(x*0.018 + idleT)*6 + Math.sin(x*0.008 + idleT*0.7)*3;
-      x===0 ? ctx2d.moveTo(x,y) : ctx2d.lineTo(x,y);
-    }
-    ctx2d.stroke();
-  }
-
-  // Start idle wave immediately
-  waveEl.classList.add('visible');
-  drawIdleWave();
-
-  btn.addEventListener('click', async()=>{
-    initAudio();
-    if(audioCtx.state==='suspended') await audioCtx.resume();
-
-    if(!isPlaying){
-      try{
-        await audio.play();
-        isPlaying = true;
-        btnIcon.textContent = '🔊';
-        btn.classList.add('playing');
-        // switch to real analyser wave
-        cancelAnimationFrame(rafId);
-        drawWave();
-      } catch(e){
-        console.warn('Audio play failed:',e);
-        btnIcon.textContent = '⚠️';
-      }
-    } else {
-      audio.pause();
-      isPlaying = false;
-      btnIcon.textContent = '🔇';
-      btn.classList.remove('playing');
-      // back to idle wave
-      cancelAnimationFrame(rafId);
-      drawIdleWave();
-    }
-  });
+  window.addEventListener('scroll',()=>{navbar.classList.toggle('scrolled',window.scrollY>20);toTop.classList.toggle('show',window.scrollY>400);});
+  const AUDIO_SRC='https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3';
+  let audio=null,audioCtx=null,analyser=null,source=null,rafId=null,isPlaying=false;
+  const btn=document.getElementById('audioToggle');
+  const btnIcon=btn.querySelector('.btn-icon');
+  const waveEl=document.getElementById('soundwave');
+  const canvas=document.getElementById('waveCanvas');
+  const ctx2d=canvas.getContext('2d');
+  function initAudio(){if(audio)return;audio=new Audio();audio.src=AUDIO_SRC;audio.loop=true;audio.crossOrigin='anonymous';audio.volume=0.35;audioCtx=new(window.AudioContext||window.webkitAudioContext)();analyser=audioCtx.createAnalyser();analyser.fftSize=256;source=audioCtx.createMediaElementSource(audio);source.connect(analyser);analyser.connect(audioCtx.destination);}
+  function resizeCanvas(){canvas.width=window.innerWidth;canvas.height=56;}
+  resizeCanvas();window.addEventListener('resize',resizeCanvas);
+  function drawWave(){rafId=requestAnimationFrame(drawWave);const bufLen=analyser.frequencyBinCount;const dataArr=new Uint8Array(bufLen);analyser.getByteTimeDomainData(dataArr);ctx2d.clearRect(0,0,canvas.width,canvas.height);const grad=ctx2d.createLinearGradient(0,0,canvas.width,0);grad.addColorStop(0,'rgba(174,226,255,0)');grad.addColorStop(0.2,'rgba(255,194,51,0.7)');grad.addColorStop(0.5,'rgba(255,122,104,0.9)');grad.addColorStop(0.8,'rgba(47,128,196,0.7)');grad.addColorStop(1,'rgba(174,226,255,0)');ctx2d.lineWidth=2.5;ctx2d.strokeStyle=grad;ctx2d.shadowBlur=8;ctx2d.shadowColor='rgba(255,194,51,0.5)';ctx2d.beginPath();const sliceW=canvas.width/bufLen;let x=0;for(let i=0;i<bufLen;i++){const v=dataArr[i]/128.0;const y=(v*canvas.height/2);i===0?ctx2d.moveTo(x,y):ctx2d.lineTo(x,y);x+=sliceW;}ctx2d.lineTo(canvas.width,canvas.height/2);ctx2d.stroke();}
+  let idleT=0;
+  function drawIdleWave(){rafId=requestAnimationFrame(drawIdleWave);idleT+=0.04;ctx2d.clearRect(0,0,canvas.width,canvas.height);const grad=ctx2d.createLinearGradient(0,0,canvas.width,0);grad.addColorStop(0,'rgba(174,226,255,0)');grad.addColorStop(0.5,'rgba(47,128,196,0.35)');grad.addColorStop(1,'rgba(174,226,255,0)');ctx2d.lineWidth=2;ctx2d.strokeStyle=grad;ctx2d.shadowBlur=4;ctx2d.shadowColor='rgba(47,128,196,0.3)';ctx2d.beginPath();for(let x=0;x<=canvas.width;x+=2){const y=canvas.height/2+Math.sin(x*0.018+idleT)*6+Math.sin(x*0.008+idleT*0.7)*3;x===0?ctx2d.moveTo(x,y):ctx2d.lineTo(x,y);}ctx2d.stroke();}
+  waveEl.classList.add('visible');drawIdleWave();
+  btn.addEventListener('click',async()=>{initAudio();if(audioCtx.state==='suspended')await audioCtx.resume();if(!isPlaying){try{await audio.play();isPlaying=true;btnIcon.textContent='🔊';btn.classList.add('playing');cancelAnimationFrame(rafId);drawWave();}catch(e){console.warn('Audio play failed:',e);btnIcon.textContent='⚠️';}}else{audio.pause();isPlaying=false;btnIcon.textContent='🔇';btn.classList.remove('playing');cancelAnimationFrame(rafId);drawIdleWave();}});
 </script>
 </body>
 </html>
