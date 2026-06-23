@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+สต<!DOCTYPE html>
 <html lang="th">
 <head>
 <meta charset="UTF-8">
@@ -478,9 +478,13 @@ header.hero,section,footer{position:relative;z-index:2;}
   btn.addEventListener('click',async()=>{initAudio();if(audioCtx.state==='suspended')await audioCtx.resume();if(!isPlaying){try{await audio.play();isPlaying=true;btnIcon.textContent='🔊';btn.classList.add('playing');cancelAnimationFrame(rafId);drawWave();}catch(e){console.warn('Audio play failed:',e);btnIcon.textContent='⚠️';}}else{audio.pause();isPlaying=false;btnIcon.textContent='🔇';btn.classList.remove('playing');cancelAnimationFrame(rafId);drawIdleWave();}});
   
    fetch('https://api.countapi.xyz/hit/mumsoong-production/visits')
-  .then(res => res.json())
-  .then(res => {
-    document.getElementById('count').textContent = res.value;
+  .then(response => response.json())
+  .then(data => {
+      document.getElementById('count').textContent = data.value;
+  })
+  .catch(error => {
+      console.error(error);
+      document.getElementById('count').textContent = '0';
   });
 </script>
 </body>
